@@ -1,0 +1,14 @@
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\EgeClient.csproj.AssemblyReference.cache
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\ExamWindow.baml
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\LoginWindow.baml
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\MainWindow.baml
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\ExamWindow.g.cs
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\LoginWindow.g.cs
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\MainWindow.g.cs
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\App.g.cs
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\EgeClient_MarkupCompile.cache
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\EgeClient.g.resources
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\EgeClient.GeneratedMSBuildEditorConfig.editorconfig
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\EgeClient.AssemblyInfoInputs.cache
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\EgeClient.AssemblyInfo.cs
+E:\EgeWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\EgeClient.csproj.CoreCompileInputs.cache
