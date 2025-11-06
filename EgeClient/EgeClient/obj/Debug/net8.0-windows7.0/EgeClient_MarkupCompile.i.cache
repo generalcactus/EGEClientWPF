@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\EgeWPF\EgeClient\EgeClient\obj\Debug\net8.0-windows7.0\
+C:\VS PROGS\EGEClientWPF-master\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net8.0-windows7.0\
 EgeClient
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\EgeWPF\EgeClient\EgeClient\App.xaml
+C:\VS PROGS\EGEClientWPF-master\EGEClientWPF\EgeClient\EgeClient\App.xaml
 32146734742
 
 17-946038643
-203-2085314533
+203442045413
 ExamWindow.xaml;LoginWindow.xaml;MainWindow.xaml;
 
 False
