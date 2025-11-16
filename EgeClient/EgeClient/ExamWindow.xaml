@@ -31,10 +31,10 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="14*"/>
             <ColumnDefinition Width="411*"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
         <!-- Left Sidebar - Tasks Navigation -->
@@ -108,7 +108,7 @@
                             Количество чисел не превышает 1000. Введённые числа не превышают 30 000. 
                             Программа должна вывести одно число: количество чисел, кратных 4, но не кратных 7.
                         </TextBlock>-->
-                        <Image x:Name="TaskImage" Height="300" ></Image>
+                        <Image x:Name="TaskImage" Height="400" ></Image>
 
                         <!-- Answer Input -->
                         <StackPanel Margin="0,20,0,0">

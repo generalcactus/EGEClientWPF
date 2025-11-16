@@ -181,48 +181,99 @@ namespace EgeClient
             }
         }
 
+        //private void UpdateTaskContent()
+        //{
+        //    try
+        //    {
+        //        if (MainWindow.variant != null)
+        //            // Обновляем баллы и текст задания
+        //            /*switch (currentTask)
+        //            {
+        //                case 1:
+        //                    txtTaskPoints.Text = "(1 балл)";
+        //                    TaskImage.Source = new BitmapImage(new Uri("D:\\EgeWPF\\EgeClient\\EgeClient\\bin\\Debug\\net8.0-windows7.0\\variant\\1.jpg"));
+        //                    break;
+        //                case 2:
+        //                    txtTaskPoints.Text = "(1 балл)";
+        //                    break;
+        //                case 3:
+        //                    txtTaskPoints.Text = "(1 балл)";
+        //                    break;
+        //                case 4:
+        //                    txtTaskPoints.Text = "(1 балл)";
+        //                    break;
+        //                case 5:
+        //                    txtTaskPoints.Text = "(1 балл)";
+        //                    break;
+        //                default:
+        //                    txtTaskPoints.Text = "(1 балл)";
+        //                    break;
+        //            }*/
+        //        foreach (TaskBase task in variant.Tasks)
+        //            {
+        //                txtTaskPoints.Text = "(1 балл)";
+        //                if (task.question != "")
+        //                {
+        //                    TaskImage.Source = new BitmapImage(new Uri($"D:\\EgeWPF\\EgeClient\\EgeClient\\bin\\Debug\\net8.0-windows7.0\\variant\\{task.question}.jpg"));
+        //                }
+        //            }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine($"Ошибка обновления контента задания: {ex.Message}");
+        //    }
+        //}
+
         private void UpdateTaskContent()
         {
             try
             {
-                if (MainWindow.variant != null)
-                    // Обновляем баллы и текст задания
-                    /*switch (currentTask)
-                    {
-                        case 1:
-                            txtTaskPoints.Text = "(1 балл)";
-                            TaskImage.Source = new BitmapImage(new Uri("D:\\EgeWPF\\EgeClient\\EgeClient\\bin\\Debug\\net8.0-windows7.0\\variant\\1.jpg"));
-                            break;
-                        case 2:
-                            txtTaskPoints.Text = "(1 балл)";
-                            break;
-                        case 3:
-                            txtTaskPoints.Text = "(1 балл)";
-                            break;
-                        case 4:
-                            txtTaskPoints.Text = "(1 балл)";
-                            break;
-                        case 5:
-                            txtTaskPoints.Text = "(1 балл)";
-                            break;
-                        default:
-                            txtTaskPoints.Text = "(1 балл)";
-                            break;
-                    }*/
-                foreach (TaskBase task in variant.Tasks)
+                if (variant?.Tasks != null)
+                {
+                    // Находим задание по текущему номеру
+                    var currentTaskObj = variant.Tasks.FirstOrDefault(t => t.task_number == currentTask);
+
+                    if (currentTaskObj != null)
                     {
                         txtTaskPoints.Text = "(1 балл)";
-                        if (task.question != "")
+
+                        // Используем жесткий путь, но для текущего задания
+                        if (!string.IsNullOrEmpty(currentTaskObj.question))
                         {
-                            TaskImage.Source = new BitmapImage(new Uri($"D:\\EgeWPF\\EgeClient\\EgeClient\\bin\\Debug\\net8.0-windows7.0\\variant\\{task.question}.jpg"));
+                            string imagePath = $"C:\\-VS-PROGS-\\EGEClientWPF-master\\EGEClientWPF-master\\EGEClientWPF\\EgeClient\\EgeClient\\bin\\Debug\\net8.0-windows7.0\\variant\\{currentTaskObj.question}.jpg";
+                            if (System.IO.File.Exists(imagePath))
+                            {
+                                TaskImage.Source = new BitmapImage(new Uri(imagePath));
+                            }
+                            else
+                            {
+                                // Если файл не найден
+                                TaskImage.Source = null;
+                                MessageBox.Show($"Файл не найден: {imagePath}");
+                                Console.WriteLine($"Файл не найден: {imagePath}");
+                            }
+                        }
+                        else
+                        {
+                            TaskImage.Source = null;
                         }
                     }
+                    else
+                    {
+                        // Если задание не найдено в варианте
+                        txtTaskPoints.Text = "(1 балл)";
+                        TaskImage.Source = null;
+                    }
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Ошибка обновления контента задания: {ex.Message}");
+                TaskImage.Source = null;
             }
         }
+
+
 
         private void btnPrevious_Click(object sender, RoutedEventArgs e)
         {

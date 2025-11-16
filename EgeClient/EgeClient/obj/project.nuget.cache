@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7Qs9MQYRJwiXMpeN8ngvnbMuAT+safobod3KKXLSC53mj6bpzGDffaGGiS2PvRhXMKl+DWBi+MeOoeVrgxsDDA==",
+  "dgSpecHash": "hdV4keUxqGE=",
   "success": true,
-  "projectFilePath": "C:\\VS PROGS\\EGEClientWPF-master\\EGEClientWPF\\EgeClient\\EgeClient\\EgeClient.csproj",
+  "projectFilePath": "C:\\-VS-PROGS-\\EGEClientWPF-master\\EGEClientWPF-master\\EGEClientWPF\\EgeClient\\EgeClient\\EgeClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\extended.wpf.toolkit\\5.0.0\\extended.wpf.toolkit.5.0.0.nupkg.sha512"
+    "C:\\Users\\Антон\\.nuget\\packages\\extended.wpf.toolkit\\5.0.0\\extended.wpf.toolkit.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
