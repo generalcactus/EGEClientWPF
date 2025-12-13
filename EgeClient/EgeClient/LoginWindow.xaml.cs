@@ -20,9 +20,9 @@ namespace EgeClient
     public partial class LoginWindow : Window
     {
         public string username;
-        string group;
-        string student_card;
-        private bool Shkolnik = false;
+        public string group;
+        public string student_card;
+        private bool isShkolnik = false;
         public bool IsDataSaved = false;
         public LoginWindow()
         {
@@ -34,7 +34,7 @@ namespace EgeClient
 
         private void SetGroupName()
         {
-            if (!Shkolnik) {
+            if (!isShkolnik) {
                 GroupName.Text = "Группа";
             }
             else
@@ -45,7 +45,7 @@ namespace EgeClient
 
         private void FillGroupList()
         {
-            if (!Shkolnik)
+            if (!isShkolnik)
             {
                 txtUserGroup.Items.Clear();
                 txtUsername.Focus();
@@ -92,24 +92,24 @@ namespace EgeClient
             {
                 // Анимация ошибки
                 txtUsername.BorderBrush = System.Windows.Media.Brushes.Red;
-                //txtUserGroup.BorderBrush = System.Windows.Media.Brushes.Red;
-                //txtUserStudCard.BorderBrush = System.Windows.Media.Brushes.Red;
             }
         }
 
         private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
         {
             // Сбрасываем стиль ошибки при изменении текста
-            txtUsername.BorderBrush = System.Windows.Media.Brushes.Gray;
+            txtUsername.BorderBrush = System.Windows.Media.Brushes.Gray;      
             errorMessage.Visibility = Visibility.Collapsed;
         }
 
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
-            Shkolnik = true;
+            isShkolnik = true;
             //MainContainment.InvalidateVisual();
             labelStudCard.Visibility = Visibility.Collapsed;
             txtUserStudCard.Visibility = Visibility.Collapsed;
+
+            txtUserStudCard.Clear();
             //this.UpdateLayout();
             //this.InvalidateVisual();
             FillGroupList();
@@ -119,7 +119,7 @@ namespace EgeClient
 
         private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
         {
-            Shkolnik = false;
+            isShkolnik = false;
             labelStudCard.Visibility = Visibility.Visible;
             txtUserStudCard.Visibility = Visibility.Visible;
             //MainContainment.InvalidateVisual();

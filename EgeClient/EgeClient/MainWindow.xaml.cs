@@ -13,6 +13,7 @@ using System.Text.Json;
 using EgeClient.Classes;
 using Microsoft.Win32;
 using System.IO.Compression;
+using System.Text.RegularExpressions;
 
 namespace EgeClient
 {
@@ -36,7 +37,10 @@ namespace EgeClient
             loginWindow.ShowDialog();
             if (loginWindow.IsDataSaved)
             {
-                variant.Student = new Student() { FIO = loginWindow.username };
+                variant.Student = new Student() { FIO = loginWindow.username,
+                    StudentGroup = (loginWindow.group != ""? loginWindow.group : null),
+                    StudentCard = (!loginWindow.student_card.Contains("_") ? loginWindow.student_card : null)
+                };
             }
         }
 

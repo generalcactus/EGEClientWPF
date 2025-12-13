@@ -7,7 +7,7 @@ namespace EgeClient.Classes
     public class Student
     {
         public string? FIO {  get; set; }
-        public string? Group {  get; set; }
-        //public int? StudentCard {  get; set; }
+        public string? StudentGroup {  get; set; }
+        public string? StudentCard {  get; set; }
     }
 }

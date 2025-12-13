@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Media.Imaging;
@@ -109,8 +110,8 @@ namespace EgeClient
                         // Используем жесткий путь, но для текущего задания
                         if (!string.IsNullOrEmpty(currentTaskObj.question))
                         {
-                            //string imagePath = $"C:\\-VS-PROGS-\\EGEClientWPF-master\\EGEClientWPF-master\\EGEClientWPF\\EgeClient\\EgeClient\\bin\\Debug\\net8.0-windows7.0\\variant\\{currentTaskObj.question}.jpg";
-                            string imagePath = $"D:\\allProjects\\приложение_C#_Core\\ForGit\\EgeClient\\EgeClient\\bin\\Debug\\net10.0-windows7.0\\variant\\{currentTaskObj.question}.jpg";
+                            string imagePath = $".\\variant\\{currentTaskObj.question}.jpg";
+                            imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imagePath);
                             if (System.IO.File.Exists(imagePath))
                             {
                                 TaskImage.Source = new BitmapImage(new Uri(imagePath));
