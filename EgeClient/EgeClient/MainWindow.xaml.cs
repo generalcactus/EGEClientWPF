@@ -22,7 +22,8 @@ namespace EgeClient
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static Variant variant = new Variant();
+        public static Variant variant;
+        public static Student student;
         public string ZipFilePath;
         public string ExtractPath = "variant";
         public MainWindow()
@@ -37,7 +38,7 @@ namespace EgeClient
             loginWindow.ShowDialog();
             if (loginWindow.IsDataSaved)
             {
-                variant.Student = new Student() { FIO = loginWindow.username,
+                student = new Student() { FIO = loginWindow.username,
                     StudentGroup = (loginWindow.group != ""? loginWindow.group : null),
                     StudentCard = (!loginWindow.student_card.Contains("_") ? loginWindow.student_card : null)
                 };
@@ -62,9 +63,9 @@ namespace EgeClient
             {
                 MessageBox.Show(ex.Message);
             }*/
-            if (variant.Student != null)
+            if (student != null)
             {
-                if (variant.Student.FIO != null && File.Exists($"I:\\Temp\\{variant.Student.FIO}"))
+                if (student.FIO != null && File.Exists($"I:\\Temp\\{student.FIO}"))
                 {
                     ZipFilePath = $"I:\\Temp\\{variant.Student.FIO}";
                 }
@@ -89,6 +90,7 @@ namespace EgeClient
                     string jsonFileName = Directory.GetFiles(ExtractPath, "*.json")[0];
                     string jsonFileText = File.ReadAllText(jsonFileName);
                     variant = JsonSerializer.Deserialize<Variant>(jsonFileText);
+                    variant.Student = student;
                     ExamWindow examWindow = new ExamWindow(variant);
                     examWindow.Owner = this;
                     examWindow.Show();
