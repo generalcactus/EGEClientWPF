@@ -88,6 +88,7 @@ namespace EgeClient
                     }
                     else
                     {
+                        SaveAnswersToJsonSimple();
                         timer.Stop();
                     }
                 }
@@ -149,6 +150,9 @@ namespace EgeClient
             // Обновляем прогресс
             progressBar.Value = taskAnswers.Count;
             txtProgress.Text = $"{taskAnswers.Count}/{totalTasks} заданий";
+
+            
+
         }
 
         private void btnSaveTable_Click(object sender, RoutedEventArgs e)

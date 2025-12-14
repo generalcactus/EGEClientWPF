@@ -1,0 +1,121 @@
+{
+  "student": {
+    "name": "fgfh"
+  },
+  "variant": {
+    "number": 16315628,
+    "date": "2024-06-20"
+  },
+  "examCompletion": "2025-12-14 22:28:30",
+  "answers": [
+    {
+      "number": 1,
+      "answer": "ляляляляляляля",
+      "type": "TextTask"
+    },
+    {
+      "number": 2,
+      "type": "TableTask"
+    },
+    {
+      "number": 3,
+      "type": "DatabaseTask"
+    },
+    {
+      "number": 4,
+      "type": "CodingTask"
+    },
+    {
+      "number": 5,
+      "type": "AlgorithmTask"
+    },
+    {
+      "number": 6,
+      "type": "GeometryTask"
+    },
+    {
+      "number": 7,
+      "type": "CalculationTask"
+    },
+    {
+      "number": 8,
+      "type": "CombinatoricsTask"
+    },
+    {
+      "number": 9,
+      "type": "SpreadsheetTask"
+    },
+    {
+      "number": 10,
+      "type": "TextAnalysisTask"
+    },
+    {
+      "number": 11,
+      "type": "CalculationTask"
+    },
+    {
+      "number": 12,
+      "type": "AlgorithmTask"
+    },
+    {
+      "number": 13,
+      "type": "GraphTask"
+    },
+    {
+      "number": 14,
+      "type": "CalculationTask"
+    },
+    {
+      "number": 15,
+      "type": "LogicTask"
+    },
+    {
+      "number": 16,
+      "type": "RecursionTask"
+    },
+    {
+      "number": 17,
+      "type": "SequenceTask"
+    },
+    {
+      "number": 18,
+      "type": "RobotTask"
+    },
+    {
+      "number": 19,
+      "type": "GameTheoryTask"
+    },
+    {
+      "number": 20,
+      "type": "GameTheoryTask"
+    },
+    {
+      "number": 21,
+      "type": "GameTheoryTask"
+    },
+    {
+      "number": 22,
+      "type": "AlgorithmTask"
+    },
+    {
+      "number": 23,
+      "type": "ProgrammingTask"
+    },
+    {
+      "number": 24,
+      "type": "FileAnalysisTask"
+    },
+    {
+      "number": 25,
+      "type": "NumberTask"
+    },
+    {
+      "number": 26,
+      "type": "CalculationTask"
+    },
+    {
+      "number": 27,
+      "type": "ProgrammingTask"
+    }
+  ]
+}
