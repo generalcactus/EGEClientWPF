@@ -79,7 +79,7 @@ namespace EgeClient
                         ZipFilePath = openFileDialog.FileName;
                     }
                 }
-                if (ZipFilePath != "")
+                if (ZipFilePath != "" && ZipFilePath != null)
                 {
                     if (Directory.Exists(ExtractPath))
                     {
@@ -125,6 +125,11 @@ namespace EgeClient
             {
                 Application.Current.Shutdown();
             }
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

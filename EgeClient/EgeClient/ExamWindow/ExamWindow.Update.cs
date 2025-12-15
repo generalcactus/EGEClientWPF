@@ -114,7 +114,22 @@ namespace EgeClient
                             imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imagePath);
                             if (System.IO.File.Exists(imagePath))
                             {
-                                TaskImage.Source = new BitmapImage(new Uri(imagePath));
+                                // 1. Создаем новый BitmapImage
+                                var bitmap = new BitmapImage();
+
+                                // 2. Начинаем инициализацию (обязательный шаг)
+                                bitmap.BeginInit();
+
+                                // 3. Устанавливаем URI
+                                bitmap.UriSource = new Uri(imagePath, UriKind.Absolute);
+
+                                // 4. *** КЛЮЧЕВОЙ ШАГ: Установка CacheOption.OnLoad ***
+                                // Это принуждает WPF прочитать весь файл в память и закрыть файловый дескриптор.
+                                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+
+                                // 5. Заканчиваем инициализацию
+                                bitmap.EndInit();
+                                TaskImage.Source = bitmap;
                             }
                             else
                             {

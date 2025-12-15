@@ -6,7 +6,8 @@
         Height="500" Width="400"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
-        Background="White">
+        Background="White"
+        >
 
     <Window.Resources>
         <Style x:Key="InputFieldStyle" TargetType="TextBox">

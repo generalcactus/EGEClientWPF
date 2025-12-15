@@ -77,7 +77,7 @@ namespace EgeClient
             {
                 if (timer != null && timer.IsEnabled)
                 {
-                    var result = MessageBox.Show("Экзамен будет завершен. Продолжить?",
+                    var result = MessageBox.Show("Экзамен будет завершен. Уверены что хотите закончить?",
                                                "Выход",
                                                MessageBoxButton.YesNo,
                                                MessageBoxImage.Warning);

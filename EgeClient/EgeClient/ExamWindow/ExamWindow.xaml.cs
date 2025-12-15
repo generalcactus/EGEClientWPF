@@ -149,8 +149,8 @@ namespace EgeClient
                     timer.Stop();
                 }
 
-                MessageBox.Show("Экзамен завершен! Ваши ответы сохранены.", "Завершено",
-                              MessageBoxButton.OK, MessageBoxImage.Information);
+/*                MessageBox.Show("Экзамен завершен! Ваши ответы сохранены.", "Завершено",
+                              MessageBoxButton.OK, MessageBoxImage.Information);*/
                 SaveAnswersToJsonSimple();
 
                 if (Owner != null)
@@ -207,6 +207,8 @@ namespace EgeClient
                     MessageBox.Show($"Файл сохранен:\n{saveFileDialog.FileName}", "Успешно",
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
+                Application.Current.MainWindow.Show();
+
             }
             catch (Exception ex)
             {
