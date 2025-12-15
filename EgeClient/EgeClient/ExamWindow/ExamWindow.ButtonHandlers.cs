@@ -149,10 +149,6 @@ namespace EgeClient
                 }
             }
 
-            // Обновляем прогресс
-            progressBar.Value = taskAnswers.Count;
-            txtProgress.Text = $"{taskAnswers.Count}/{totalTasks} заданий";
-
             
 
         }
@@ -160,11 +156,33 @@ namespace EgeClient
         private void btnSaveTable_Click(object sender, RoutedEventArgs e)
         {
             taskAnswers[currentTask] = SerializeGridAnswers(AnswerTableGrid, tableTaskConfigs[currentTask]);
+            foreach (Button btn in ListOfButtons.Children)
+            {
+                if (btn.Content.ToString() == currentTask.ToString())
+                {
+                    var answeredStyle = (Style)this.FindResource("AnsweredTaskButtonStyle");
+                    if (answeredStyle != null)
+                    {
+                        btn.Style = answeredStyle;
+                    }
+                }
+            }
         }
 
         private void btnClearTable_Click(object sender, RoutedEventArgs e)
         {
             taskAnswers[currentTask] = "";
+            foreach (Button btn in ListOfButtons.Children)
+            {
+                if (btn.Content.ToString() == currentTask.ToString())
+                {
+                    var answeredStyle = (Style)this.FindResource("TaskButtonStyle");
+                    if (answeredStyle != null)
+                    {
+                        btn.Style = answeredStyle;
+                    }
+                }
+            }
             UpdateTaskDisplay(currentTask);
         }
 

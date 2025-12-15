@@ -87,6 +87,10 @@ namespace EgeClient
                 {
                     UpdateDownloadLink(currentTaskObj.file);
                 }
+                else
+                {
+                    DownloadLinkContainer.Children.Clear();
+                }
             }
             catch (Exception ex)
             {

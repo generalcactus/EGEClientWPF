@@ -296,9 +296,7 @@ Foreground="White" BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnSa
                     <TextBlock Text="Время: 3 часа 55 минут" FontSize="12"/>
                 </Border>
 
-                <TextBlock Text="Прогресс" FontWeight="SemiBold" Margin="0,20,0,5"/>
-                <ProgressBar x:Name="progressBar" Value="1" Maximum="27" Height="10" Margin="0,0,0,10"/>
-                <TextBlock x:Name="txtProgress" Text="1/27 заданий" FontSize="12" Foreground="#666" HorizontalAlignment="Center"/>
+                
             </StackPanel>
         </Border>
     </Grid>
