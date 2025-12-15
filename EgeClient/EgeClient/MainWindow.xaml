@@ -4,7 +4,8 @@
         Title="ЕГЭ по информатике - Подготовка" 
         Height="700" Width="1200"
         WindowStartupLocation="CenterScreen"
-        Background="#f8f9fa">
+        Background="#f8f9fa"
+        Closing="MainWindow_Closing">
 
     <Window.Resources>
         <Style x:Key="MenuButtonStyle" TargetType="Button">

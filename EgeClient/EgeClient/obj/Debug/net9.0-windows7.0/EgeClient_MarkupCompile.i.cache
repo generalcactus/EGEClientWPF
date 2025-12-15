@@ -4,16 +4,21 @@
 winexe
 C#
 .cs
-C:\-VS-PROGS-\EGEClientWPF-master\latest vers\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\
+D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net9.0-windows7.0\
 EgeClient
 none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\-VS-PROGS-\EGEClientWPF-master\latest vers\EGEClientWPF\EgeClient\EgeClient\App.xaml
+D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\App.xaml
 31418563368
 
+<<<<<<< HEAD
 252005294059
 205-1972981059
+=======
+24958155018
+2051197670266
+>>>>>>> 46eafea3b1098d3cfec9a8af178a19a9d58db162
 ExamWindow\ExamWindow.xaml;LoginWindow.xaml;MainWindow.xaml;
 
 False
