@@ -23,7 +23,7 @@ namespace EgeClient
         public string group;
         public string student_card;
         private bool isShkolnik = false;
-        public bool IsDataSaved = false;
+        public bool IsDataSaved;
         public LoginWindow()
         {
             InitializeComponent();
@@ -75,6 +75,7 @@ namespace EgeClient
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            IsDataSaved = false;
             username = txtUsername.Text;
             group = txtUserGroup.Text;
             student_card = txtUserStudCard.Text;

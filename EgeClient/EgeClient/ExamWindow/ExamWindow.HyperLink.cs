@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -40,7 +41,8 @@ namespace EgeClient
 
             var hyperlink = new Hyperlink
             {
-                NavigateUri = new Uri($"D:\\allProjects\\приложение_C#_Core\\ForGit\\EgeClient\\EgeClient\\bin\\Debug\\net10.0-windows7.0\\variant\\{fileName}", UriKind.RelativeOrAbsolute),
+                NavigateUri = new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $".\\variant\\{fileName}")),
+                //NavigateUri = new Uri($"D:\\allProjects\\приложение_C#_Core\\ForGit\\EgeClient\\EgeClient\\bin\\Debug\\net10.0-windows7.0\\variant\\{fileName}", UriKind.RelativeOrAbsolute),
                 FontSize = 16,
 
             };

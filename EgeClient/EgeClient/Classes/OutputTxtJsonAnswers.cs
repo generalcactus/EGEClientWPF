@@ -51,6 +51,7 @@ namespace EgeClient.Classes
                     MessageBox.Show($"Файл сохранен:\n{saveFileDialog.FileName}", "Успешно",
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
+                Application.Current.MainWindow.Show();
             }
             catch (Exception ex)
             {
@@ -98,6 +99,7 @@ namespace EgeClient.Classes
                         }
                     }
                 }
+                Application.Current.MainWindow.Show();
             }
             catch (Exception ex)
             {

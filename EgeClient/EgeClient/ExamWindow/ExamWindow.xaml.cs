@@ -67,9 +67,6 @@ namespace EgeClient
 
             // Устанавливаем начальные значения для безопасности
             txtTimer.Text = "03:55:00";
-            txtProgress.Text = "1/27 заданий";
-            progressBar.Value = 1;
-            progressBar.Maximum = 27;
 
             txtAnswer.TextChanged += txtAnswer_TextChanged;
         }
@@ -150,10 +147,10 @@ namespace EgeClient
                 }
 
 
-                MessageBox.Show("Экзамен завершен! Ваши ответы сохранены.", "Завершено",
-                              MessageBoxButton.OK, MessageBoxImage.Information);
+                /*MessageBox.Show("Экзамен завершен! Ваши ответы сохранены.", "Завершено",
+                              MessageBoxButton.OK, MessageBoxImage.Information);*/
                 OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
-                OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
+                //OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
                 
 
 
