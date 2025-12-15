@@ -160,7 +160,6 @@ D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClien
 D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net10.0-windows7.0\EgeClient.AssemblyInfoInputs.cache
 D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net10.0-windows7.0\EgeClient.AssemblyInfo.cs
 D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net10.0-windows7.0\EgeClient.csproj.CoreCompileInputs.cache
-D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net10.0-windows7.0\EgeClient.sourcelink.json
 D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net10.0-windows7.0\EgeClient.csproj.Up2Date
 D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net10.0-windows7.0\EgeClient.dll
 D:\allProjects\приложение_C#_Core\test\EGEClientWPF\EgeClient\EgeClient\obj\Debug\net10.0-windows7.0\refint\EgeClient.dll

@@ -162,7 +162,8 @@ namespace EgeClient
 
         private void btnClearTable_Click(object sender, RoutedEventArgs e)
         {
-
+            taskAnswers[currentTask] = "";
+            UpdateTaskDisplay(currentTask);
         }
 
 
