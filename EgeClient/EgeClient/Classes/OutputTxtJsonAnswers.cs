@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -64,39 +65,59 @@ namespace EgeClient.Classes
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter($"{variant.Student?.FIO?.Replace(" ", "") ?? "Unknown"}_ответы.txt"))
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
+                saveFileDialog.FileName = $"{variant.Student?.FIO?.Replace(" ", "") ?? "Unknown"}_ответы.txt";
+                saveFileDialog.Title = "Сохранить ответы";
+                saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                if (saveFileDialog.ShowDialog() == true)
                 {
-                    for (int i = 1; i <= variant.Tasks.Count; i++)
+                    using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
                     {
-                        if (taskAnswers.ContainsKey(i))
+                        for (int i = 1; i <= variant.Tasks.Count; i++)
                         {
-                            if (i == 17 || i == 18 || i == 20 || i == 25 || i == 26)
+                            if (taskAnswers.ContainsKey(i))
                             {
-                                string[] s = taskAnswers[i].Split(';');
-                                string[] stolb1 = s[0].Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                                string[] stolb2 = s[1].Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                                string answer = "";
-                                for (int j = 0; j < stolb1.Length - 1; j++)
+                                if (i == 17 || i == 18 || i == 20 || i == 25 || i == 26)
                                 {
-                                    answer += $"{stolb1[j]} {stolb2[j]}, ";
-                                }
-                                answer += $"{stolb1[stolb1.Length - 1]} {stolb2[stolb1.Length - 1]}";
-                                for (int k = 0; k < answer.Length; k++)
-                                {
-                                    if (char.IsLetter(answer[k]))
+                                    string[] s = taskAnswers[i].Split(';');
+                                    string[] stolb1 = s[0].Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                                    string[] stolb2 = s[1].Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                                    string answer = "";
+                                    for (int j = 0; j < stolb1.Length - 1; j++)
                                     {
-                                        answer = answer.Substring(0, k - 2);
+                                        answer += $"{stolb1[j]} {stolb2[j]}, ";
                                     }
+                                    answer += $"{stolb1[stolb1.Length - 1]} {stolb2[stolb1.Length - 1]}";
+                                    for (int k = 0; k < answer.Length; k++)
+                                    {
+                                        if (char.IsLetter(answer[k]))
+                                        {
+                                            if (k >= 2)
+                                            {
+                                                answer = answer.Substring(0, k - 2);
+                                            }
+                                            else
+                                            {
+                                                answer = "%noanswer%";
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    sw.WriteLine($"{i} - {answer}");
                                 }
-                                sw.WriteLine($"{i} - {answer}");
+                                else sw.WriteLine($"{i} - {taskAnswers[i]}");
                             }
-                            else sw.WriteLine($"{i} - {taskAnswers[i]}");
-                        }
-                        else
-                        {
-                            sw.WriteLine($"{i} - %noanswer%");
+                            else
+                            {
+                                sw.WriteLine($"{i} - %noanswer%");
+                            }
                         }
                     }
+                    MessageBox.Show($"Файл успешно сохранен!", "Сохранение завершено",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)

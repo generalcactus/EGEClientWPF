@@ -1,4 +1,4 @@
-1 - 555
+1 - айайай
 2 - %noanswer%
 3 - %noanswer%
 4 - %noanswer%
@@ -23,5 +23,5 @@
 23 - %noanswer%
 24 - %noanswer%
 25 - %noanswer%
-26 - 1 2, 3 4
+26 - 1 11, 2 22
 27 - %noanswer%

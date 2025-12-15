@@ -89,7 +89,7 @@ namespace EgeClient
                     }
                     else
                     {
-                        OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
+                        //OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
                         OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
                         timer.Stop();
                     }

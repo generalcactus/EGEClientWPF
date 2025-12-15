@@ -153,7 +153,7 @@ namespace EgeClient
                 MessageBox.Show("Экзамен завершен! Ваши ответы сохранены.", "Завершено",
                               MessageBoxButton.OK, MessageBoxImage.Information);
                 OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
-                OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
+                //OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
                 
 
 
