@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using EgeClient.Classes;
 
 namespace EgeClient
 {
@@ -88,7 +89,8 @@ namespace EgeClient
                     }
                     else
                     {
-                        SaveAnswersToJsonSimple();
+                        OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
+                        OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
                         timer.Stop();
                     }
                 }
