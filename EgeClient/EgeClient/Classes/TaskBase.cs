@@ -10,8 +10,7 @@ namespace EgeClient.Classes
         public string? question { get; set; }
         public string? student_answer { get; set; }
         public string? task_type { get; set; }
-        public string? image {  get; set; }
-        public string? file {  get; set; }
+        public List<string>? file {  get; set; }
 
     }
 }

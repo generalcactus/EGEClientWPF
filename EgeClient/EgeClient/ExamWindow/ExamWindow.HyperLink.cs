@@ -14,50 +14,52 @@ namespace EgeClient
 {
     public partial class ExamWindow : Window
     {
-        private void UpdateDownloadLink(string fileName)
+        private void UpdateDownloadLink(List<string> fileName)
         {
             DownloadLinkContainer.Children.Clear();
-            if (string.IsNullOrEmpty(fileName))
+            if (fileName.Count == 0)
             {
                 return;
             }
+            foreach (string file in fileName) {
+                var linkStack = new StackPanel { Orientation = Orientation.Horizontal, Cursor = Cursors.Hand, Margin = new Thickness(25, 0, 0, 0) };
+                var icon = new TextBlock
+                {
+                    Text = "📖",
+                    FontSize = 16,
+                    Foreground = new BrushConverter().ConvertFromString("#28a745") as SolidColorBrush,
+                    Margin = new Thickness(0, 0, 5, 0),
+                    VerticalAlignment = VerticalAlignment.Center
+                };
 
-            var linkStack = new StackPanel { Orientation = Orientation.Horizontal, Cursor = Cursors.Hand, Margin = new Thickness(25, 0, 0, 0) };
-            var icon = new TextBlock
-            {
-                Text = "📖",
-                FontSize = 16,
-                Foreground = new BrushConverter().ConvertFromString("#28a745") as SolidColorBrush,
-                Margin = new Thickness(0, 0, 5, 0),
-                VerticalAlignment = VerticalAlignment.Center
-            };
+                // создаем текстовый блок с ссылкой
+                var textBlock = new TextBlock
+                {
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Foreground = Brushes.AliceBlue
+                };
 
-            // создаем текстовый блок с ссылкой
-            var textBlock = new TextBlock
-            {
-                VerticalAlignment = VerticalAlignment.Center,
-                Foreground = Brushes.AliceBlue
-            };
+                var hyperlink = new Hyperlink
+                {
+                    NavigateUri = new Uri(file),
+                    //NavigateUri = new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $".\\variant\\{fileName}")),
+                    //NavigateUri = new Uri($"D:\\allProjects\\приложение_C#_Core\\ForGit\\EgeClient\\EgeClient\\bin\\Debug\\net10.0-windows7.0\\variant\\{fileName}", UriKind.RelativeOrAbsolute),
+                    FontSize = 16,
 
-            var hyperlink = new Hyperlink
-            {
-                NavigateUri = new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $".\\variant\\{fileName}")),
-                //NavigateUri = new Uri($"D:\\allProjects\\приложение_C#_Core\\ForGit\\EgeClient\\EgeClient\\bin\\Debug\\net10.0-windows7.0\\variant\\{fileName}", UriKind.RelativeOrAbsolute),
-                FontSize = 16,
+                };
 
-            };
+                hyperlink.Inlines.Add(Path.GetFileName(file));
+                // добавляем обработчик нажатия на ссылку
+                //hyperlink.Click += (s, e) => HandleDownloadClick(fileName);
+                hyperlink.RequestNavigate += Hyperlink_RequestNavigate;
 
-            hyperlink.Inlines.Add(fileName);
-            // добавляем обработчик нажатия на ссылку
-            //hyperlink.Click += (s, e) => HandleDownloadClick(fileName);
-            hyperlink.RequestNavigate += Hyperlink_RequestNavigate;
+                textBlock.Inlines.Add(hyperlink);
+                // собираем элементы и добавляем их в контейнер
+                linkStack.Children.Add(icon);
+                linkStack.Children.Add(textBlock);
 
-            textBlock.Inlines.Add(hyperlink);
-            // собираем элементы и добавляем их в контейнер
-            linkStack.Children.Add(icon);
-            linkStack.Children.Add(textBlock);
-
-            DownloadLinkContainer.Children.Add(linkStack);
+                DownloadLinkContainer.Children.Add(linkStack);
+            }
         }
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {

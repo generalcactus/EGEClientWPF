@@ -44,11 +44,7 @@ namespace EgeClient
                             return textBox.Text.Trim();
                         }
                     }
-                    // Если элемент TextBox был добавлен напрямую (без Border)
-                    else if (element is TextBox directTextBox)
-                    {
-                        return directTextBox.Text.Trim();
-                    }
+
                 }
             }
             return null; // Значение не найдено
@@ -58,48 +54,48 @@ namespace EgeClient
         {
             if (string.IsNullOrWhiteSpace(serializedData)) return;
 
-            // 1. Разделяем строку на данные для Колонок 1 и 2
+            // разделяем строку на данные для Колонок 1 и 2
             string[] parts = serializedData.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
 
             if (parts.Length != 2) return; // Неверный формат
 
-            // 2. Разделяем каждую колонку на отдельные значения
+            // разделяем каждую колонку на отдельные значения
             string[] col1Values = parts[0].Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             string[] col2Values = parts[1].Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            // 3. Проверяем, что количество данных соответствует количеству строк
+            // проверяем, что количество данных соответствует количеству строк
             if (col1Values.Length < requiredRows || col2Values.Length < requiredRows)
             {
-                // Недостаточно данных для восстановления всех строк
+                // недостаточно данных для восстановления всех строк
                 return;
             }
 
-            // 4. Заполняем TextBox в каждой строке
+            // заполняем TextBox в каждой строке
             for (int row = 1; row <= requiredRows; row++)
             {
-                // Индекс массива на 1 меньше, чем индекс строки (так как массивы с 0)
+                // индекс массива на 1 меньше, чем индекс строки (так как массивы с 0)
                 int dataIndex = row - 1;
 
-                // Заполняем столбец 1
+                // заполняем столбец 1
                 SetTextBoxValue(AnswerTableGrid, row, 1, col1Values[dataIndex]);
 
-                // Заполняем столбец 2
+                // заполняем столбец 2
                 SetTextBoxValue(AnswerTableGrid, row, 2, col2Values[dataIndex]);
             }
         }
 
-        // Вспомогательная функция для поиска и установки значения TextBox
+        // зспомогательная функция для поиска и установки значения TextBox
         private void SetTextBoxValue(Grid grid, int row, int col, string value)
         {
-            // Заменяем 'missed' на пустую строку
+            // заменяем 'missed' на пустую строку
             string textToSet = (value.ToLower() == "missed") ? string.Empty : value;
 
             foreach (UIElement element in grid.Children)
             {
-                // Ищем элемент по позиции
+                // ищем элемент по позиции
                 if (Grid.GetRow(element) == row && Grid.GetColumn(element) == col)
                 {
-                    // Элементы ввода у нас обернуты в Border
+                    // элементы ввода у нас обернуты в Border
                     if (element is Border border)
                     {
                         if (border.Child is TextBox textBox)
@@ -107,12 +103,6 @@ namespace EgeClient
                             textBox.Text = textToSet;
                             return;
                         }
-                    }
-                    // Если TextBox был добавлен напрямую
-                    else if (element is TextBox directTextBox)
-                    {
-                        directTextBox.Text = textToSet;
-                        return;
                     }
                 }
             }

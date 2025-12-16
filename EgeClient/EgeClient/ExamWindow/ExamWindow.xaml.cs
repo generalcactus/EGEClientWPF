@@ -18,26 +18,25 @@ namespace EgeClient
 {
     public partial class ExamWindow : Window
     {
-        private readonly Dictionary<int, string> fileDownloadConfigs = new Dictionary<int, string>
+        /*private readonly Dictionary<int, string> fileDownloadConfigs = new Dictionary<int, string>
         {
             { 18, "18.xlsx" },
             { 26, "file_q26.zip" },
             { 27, "image_a.jpg" }
             // ... другие задания с файлами ...
-        };
+        };*/
         private readonly Dictionary<int, int> tableTaskConfigs = new Dictionary<int, int>
         {
-            { 17, 5 },  // Задание 17 требует 5 строк
-            { 18, 10 }, // Задание 18 требует 10 строк
-            { 19, 3 },  // Задание 19 требует 3 строки
-            { 20, 8 },  // Задание 20 требует 8 строк
-            // ... добавьте остальные задания с их количеством строк ...
-            { 25, 6 },
-            { 26, 4 },
+            { 17, 1 },
+            { 18, 1 },
+            { 20, 1 },  
+            { 25, 5 },
+            { 26, 1 },
+            { 27, 2}
         };
 
         Variant variant;
-        private readonly int[] tableTaskNumbers = { 17, 18, 19, 20, 25, 26 };
+        private readonly int[] tableTaskNumbers = { 17, 18, 19, 20, 25, 26, 27 };
 
         private DispatcherTimer timer;
         private int timeRemaining = 3 * 60 * 60 + 55 * 60; // 3 часа 55 минут в секундах
@@ -52,11 +51,6 @@ namespace EgeClient
             variant = var;
             InitializeComponent();
             InitializeElements();
-            // **Важно:** Сгенерируем ячейки таблицы при инициализации
-            //GenerateTableCells();
-
-            // Инициализируем вид для первого задания
-            //UpdateTaskView(currentTask);
 
             InitializeTimer();
             UpdateTaskDisplay(1);
@@ -68,22 +62,8 @@ namespace EgeClient
             // Устанавливаем начальные значения для безопасности
             txtTimer.Text = "03:55:00";
 
-            txtAnswer.TextChanged += txtAnswer_TextChanged;
         }
        
-
-
-        private void txtAnswer_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            //if (taskAnswers.ContainsKey(currentTask))
-            //{
-            //    taskAnswers[currentTask] = txtAnswer.Text;
-            //}
-            //else
-            //{
-            //    taskAnswers.Add(currentTask, txtAnswer.Text);
-            //}
-        }
 
         private void InitializeTimer()
         {
@@ -119,23 +99,9 @@ namespace EgeClient
             }
             catch (Exception ex)
             {
-                // Заглушка на случай ошибок
                 Console.WriteLine($"Ошибка обновления таймера: {ex.Message}");
             }
         }
-
-
-        
-        private void HandleDownloadClick(string fileName)
-        {
-            MessageBox.Show($"Начато скачивание файла: {fileName}");
-
-            // Здесь должна быть реальная логика скачивания:
-            // 1. Определить полный путь к файлу.
-            // 2. Определить место для сохранения (например, папка "Загрузки").
-            // 3. Запустить процесс скачивания (например, с помощью System.Diagnostics.Process.Start для открытия файла/ссылки).
-        }
-
 
         private void FinishExam()
         {
@@ -145,10 +111,6 @@ namespace EgeClient
                 {
                     timer.Stop();
                 }
-
-
-                /*MessageBox.Show("Экзамен завершен! Ваши ответы сохранены.", "Завершено",
-                              MessageBoxButton.OK, MessageBoxImage.Information);*/
                 OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
                 //OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
                 
@@ -167,27 +129,5 @@ namespace EgeClient
             }
         }
 
-
-
-        
-
-
-
-
-
-        private void AnswerTextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            // Заглушка для обработки клавиш в текстовом поле
-        }
-
-        private void TaskNavigation_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            // Заглушка для навигации по заданиям с клавиатуры
-        }
-
-        public void Window_Closing()
-        {
-            
-        }
     }
 }

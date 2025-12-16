@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace EgeClient
 {
-    /// <summary>
-    /// Interaction logic for LoginWindow.xaml
-    /// </summary>
     public partial class LoginWindow : Window
     {
         public string username;
@@ -79,7 +76,6 @@ namespace EgeClient
             username = txtUsername.Text;
             group = txtUserGroup.Text;
             student_card = txtUserStudCard.Text;
-            // Простая демонстрационная проверка
             if (username !="")
             {
                 // Успешная авторизация
@@ -91,7 +87,7 @@ namespace EgeClient
             }
             else
             {
-                // Анимация ошибки
+                // не введено имя(выделение красным цветом)
                 txtUsername.BorderBrush = System.Windows.Media.Brushes.Red;
             }
         }
@@ -106,13 +102,10 @@ namespace EgeClient
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             isShkolnik = true;
-            //MainContainment.InvalidateVisual();
             labelStudCard.Visibility = Visibility.Collapsed;
             txtUserStudCard.Visibility = Visibility.Collapsed;
 
             txtUserStudCard.Clear();
-            //this.UpdateLayout();
-            //this.InvalidateVisual();
             FillGroupList();
             SetGroupName();
 
@@ -123,12 +116,8 @@ namespace EgeClient
             isShkolnik = false;
             labelStudCard.Visibility = Visibility.Visible;
             txtUserStudCard.Visibility = Visibility.Visible;
-            //MainContainment.InvalidateVisual();
-            //this.UpdateLayout();
-            //this.InvalidateVisual();
             FillGroupList();
             SetGroupName();
         }
-        //кириешки
     }
 }

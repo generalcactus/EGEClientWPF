@@ -204,7 +204,7 @@ namespace EgeClient {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EgeClient;component/examwindow/examwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EgeClient;V1.0.0.0;component/examwindow/examwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\ExamWindow\ExamWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

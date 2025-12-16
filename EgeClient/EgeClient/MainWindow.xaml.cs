@@ -17,14 +17,12 @@ using System.Text.RegularExpressions;
 
 namespace EgeClient
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        public static Variant variant;
+        public static Variant variant = new Variant();
         public static Student student;
-        public string ZipFilePath;
+        //public string ZipFilePath;
+        public string VariantFolder;
         public string ExtractPath = "variant";
         public MainWindow()
         {
@@ -47,39 +45,29 @@ namespace EgeClient
 
         private void btnStartExam_Click(object sender, RoutedEventArgs e)
         {
-            /*try
-            {
-                if (!File.Exists("D:\\EgeWPF\\exam\\1.json"))
-                {
-                    throw new FileNotFoundException("File not found!");
-                }
-                string jsonString = File.ReadAllText("D:\\EgeWPF\\exam\\1.json");
-                variant = JsonSerializer.Deserialize<Variant>(jsonString);
-                MessageBox.Show(variant.Tasks[0].question);
-                string newstrJson = JsonSerializer.Serialize<Variant>(variant);
-                File.WriteAllText("D:\\EgeWPF\\exam\\2.json", newstrJson);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }*/
             if (student != null)
             {
                 if (student.FIO != null && File.Exists($"I:\\Temp\\{student.FIO}"))
                 {
-                    ZipFilePath = $"I:\\Temp\\{variant.Student.FIO}";
+                    //ZipFilePath = $"I:\\Temp\\{variant.Student.FIO}";
+                    VariantFolder = $"I:\\Temp\\{variant.Student.FIO}_задания";
                 }
                 else
                 {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    /*OpenFileDialog openFileDialog = new OpenFileDialog();
                     openFileDialog.Multiselect = false;
                     openFileDialog.DefaultExt = ".zip";
                     if (openFileDialog.ShowDialog() == true)
                     {
                         ZipFilePath = openFileDialog.FileName;
+                    }*/
+                    OpenFolderDialog openFolderDialog = new OpenFolderDialog();
+                    if(openFolderDialog.ShowDialog() == true)
+                    {
+                        VariantFolder = openFolderDialog.FolderName;
                     }
                 }
-                if (ZipFilePath != "" && ZipFilePath != null)
+                /*if (ZipFilePath != "" && ZipFilePath != null)
                 {
                     if (Directory.Exists(ExtractPath))
                     {
@@ -95,23 +83,25 @@ namespace EgeClient
                     examWindow.Owner = this;
                     examWindow.Show();
                     this.Hide();
+                }*/
+                if (VariantFolder != "" && VariantFolder != null && System.IO.Path.GetFileNameWithoutExtension(VariantFolder)==student.FIO)
+                {
+                    TaskLoader taskLoader = new TaskLoader(VariantFolder);
+                    variant.Tasks = taskLoader.TaskList;
+                    variant.Student = student;
+                    ExamWindow examWindow = new ExamWindow(variant);
+                    examWindow.Owner = this;
+                    examWindow.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Вы не выбрали архив с вариантом", "Не выбран файл");
+                    MessageBox.Show("Вы не выбрали папку с вариантом или выбрали не свою");
                 }
             }
             else
             {
                 MessageBox.Show("Сначала введите ваши данные", "Ошибка авторизации");
-            }
-        }
-        private void MenuButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Заглушка для кнопок меню
-            if (sender is System.Windows.Controls.Button button)
-            {
-                MessageBox.Show($"Нажата кнопка: {button.Content}", "Меню");
             }
         }
         private void btnExit_Click(object sender, RoutedEventArgs e)

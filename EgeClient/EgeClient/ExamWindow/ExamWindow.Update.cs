@@ -18,7 +18,7 @@ namespace EgeClient
 
                 if (isTableTask)
                 {
-                    // --- РЕЖИМ ТАБЛИЦЫ ---
+                    // режим таблицы
 
                     if (tableTaskConfigs.ContainsKey(taskNumber))
                     {
@@ -40,12 +40,13 @@ namespace EgeClient
 
                     // 3. Показываем табличное поле ввода
                     TableAnswerPanel.Visibility = Visibility.Visible;
+
                     labelAnswer.Visibility = Visibility.Hidden;
                     btnSaveAnswer.Visibility = Visibility.Hidden;
                 }
                 else
                 {
-                    // --- РЕЖИМ ТЕКСТОВОГО ПОЛЯ ---
+                    // режим текстового поля
 
                     Col0.Width = new GridLength(1, GridUnitType.Star);
                     Col1.Width = new GridLength(0);
@@ -81,6 +82,7 @@ namespace EgeClient
 
                 //ссылка на скачивание
                 string fileName = null;
+
                 //fileDownloadConfigs.TryGetValue(taskNumber, out fileName);
                 var currentTaskObj = variant.Tasks.FirstOrDefault(t => t.task_number == currentTask);
                 if (currentTaskObj.file != null)
@@ -109,29 +111,20 @@ namespace EgeClient
 
                     if (currentTaskObj != null)
                     {
-                        txtTaskPoints.Text = "(1 балл)";
-
-                        // Используем жесткий путь, но для текущего задания
+                        // достаем картинку задания
                         if (!string.IsNullOrEmpty(currentTaskObj.question))
                         {
-                            string imagePath = $".\\variant\\{currentTaskObj.question}.jpg";
-                            imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imagePath);
+                            //string imagePath = $".\\variant\\{currentTaskObj.question}.jpg";
+                            //imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imagePath);
+                            string imagePath = currentTaskObj.question;
                             if (System.IO.File.Exists(imagePath))
                             {
-                                // 1. Создаем новый BitmapImage
                                 var bitmap = new BitmapImage();
-
-                                // 2. Начинаем инициализацию (обязательный шаг)
                                 bitmap.BeginInit();
-
-                                // 3. Устанавливаем URI
                                 bitmap.UriSource = new Uri(imagePath, UriKind.Absolute);
 
-                                // 4. *** КЛЮЧЕВОЙ ШАГ: Установка CacheOption.OnLoad ***
-                                // Это принуждает WPF прочитать весь файл в память и закрыть файловый дескриптор.
+                                // прочитывание всего файла в память и закрие файлового дескриптора.
                                 bitmap.CacheOption = BitmapCacheOption.OnLoad;
-
-                                // 5. Заканчиваем инициализацию
                                 bitmap.EndInit();
                                 TaskImage.Source = bitmap;
                             }
@@ -150,8 +143,6 @@ namespace EgeClient
                     }
                     else
                     {
-                        // Если задание не найдено в варианте
-                        txtTaskPoints.Text = "(1 балл)";
                         TaskImage.Source = null;
                     }
                 }
