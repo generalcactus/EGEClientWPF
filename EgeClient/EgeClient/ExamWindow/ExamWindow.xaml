@@ -5,7 +5,8 @@
         Height="800" Width="1400"
         WindowStartupLocation="CenterScreen"
         Background="#f8f9fa"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        Icon="/Resourses/Gemini_Generated_Image_231mz5231mz5231m.ico">
 
     <Window.Resources>
         <Style x:Key="TaskButtonStyle" TargetType="Button">

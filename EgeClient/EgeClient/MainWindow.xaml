@@ -5,7 +5,8 @@
         Height="700" Width="1200"
         WindowStartupLocation="CenterScreen"
         Background="#f8f9fa"
-        Closing="MainWindow_Closing">
+        Closing="MainWindow_Closing"
+        Icon="/Resourses/Gemini_Generated_Image_231mz5231mz5231m.ico">
 
     <Window.Resources>
         <Style x:Key="MenuButtonStyle" TargetType="Button">

@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.tableresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.tableresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\classes\\taskloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\classes\\taskloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\classes\\outputtxtjsonanswers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\classes\\outputtxtjsonanswers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.hyperlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.hyperlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\classes\\taskloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\classes\\taskloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\classes\\taskbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\classes\\taskbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|d:\\allprojects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_c#_core\\test\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.tableresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.tableresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,92 +43,76 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ExamWindow.TableResults.cs",
-              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.TableResults.cs",
-              "RelativeDocumentMoniker": "EgeClient\\ExamWindow\\ExamWindow.TableResults.cs",
-              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.TableResults.cs",
-              "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.TableResults.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T04:32:33.928Z",
+              "Title": "ExamWindow.xaml",
+              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.xaml",
+              "RelativeDocumentMoniker": "EgeClient\\ExamWindow\\ExamWindow.xaml",
+              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.xaml",
+              "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-16T05:06:52.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ExamWindow.Table.cs",
-              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.Table.cs",
-              "RelativeDocumentMoniker": "EgeClient\\ExamWindow\\ExamWindow.Table.cs",
-              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.Table.cs",
-              "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.Table.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAAEMAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T04:31:42.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ExamWindow.xaml.cs",
-              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.xaml.cs",
-              "RelativeDocumentMoniker": "EgeClient\\ExamWindow\\ExamWindow.xaml.cs",
-              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.xaml.cs",
-              "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.xaml.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T04:00:57.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OutputTxtJsonAnswers.cs",
-              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
-              "RelativeDocumentMoniker": "EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
-              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
-              "RelativeToolTip": "EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAIA0wCAAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T03:49:20.153Z",
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "EgeClient\\LoginWindow.xaml",
+              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\LoginWindow.xaml",
+              "RelativeToolTip": "EgeClient\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-16T05:06:44.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "EgeClient\\MainWindow.xaml",
+              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\MainWindow.xaml",
+              "RelativeToolTip": "EgeClient\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-16T05:05:55.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OutputTxtJsonAnswers.cs",
+              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
+              "RelativeDocumentMoniker": "EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
+              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
+              "RelativeToolTip": "EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T04:42:45.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TaskLoader.cs",
               "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\TaskLoader.cs",
               "RelativeDocumentMoniker": "EgeClient\\Classes\\TaskLoader.cs",
               "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\TaskLoader.cs",
               "RelativeToolTip": "EgeClient\\Classes\\TaskLoader.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAA2wHMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAgwEoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T02:45:48.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TaskBase.cs",
-              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\TaskBase.cs",
-              "RelativeDocumentMoniker": "EgeClient\\Classes\\TaskBase.cs",
-              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\TaskBase.cs",
-              "RelativeToolTip": "EgeClient\\Classes\\TaskBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T03:15:34.834Z",
+              "WhenOpened": "2025-12-16T04:42:43.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ExamWindow.HyperLink.cs",
-              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.HyperLink.cs",
-              "RelativeDocumentMoniker": "EgeClient\\ExamWindow\\ExamWindow.HyperLink.cs",
-              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.HyperLink.cs",
-              "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.HyperLink.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Title": "ExamWindow.TableResults.cs",
+              "DocumentMoniker": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.TableResults.cs",
+              "RelativeDocumentMoniker": "EgeClient\\ExamWindow\\ExamWindow.TableResults.cs",
+              "ToolTip": "D:\\allProjects\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435_C#_Core\\test\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.TableResults.cs",
+              "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.TableResults.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA5wC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T03:15:52.138Z",
+              "WhenOpened": "2025-12-16T04:32:33.928Z",
               "EditorCaption": ""
             }
           ]

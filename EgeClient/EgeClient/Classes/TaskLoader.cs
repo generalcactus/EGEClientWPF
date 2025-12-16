@@ -72,7 +72,7 @@ namespace EgeClient.Classes
                 {
                     string extension = Path.GetExtension(file).ToLower();
 
-                    if (extension == ".png")
+                    if (extension == ".png" || extension == ".jpg")
                     {
                         // Предполагаем, что картинка — это 'question'
                         questionPath = file;
