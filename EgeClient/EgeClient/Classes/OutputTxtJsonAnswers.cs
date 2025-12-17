@@ -117,12 +117,14 @@ namespace EgeClient.Classes
                                     string[] stolb1 = s[0].Split(" ", StringSplitOptions.RemoveEmptyEntries);
                                     string[] stolb2 = s[1].Split(" ", StringSplitOptions.RemoveEmptyEntries);
                                     int cutindex = stolb1.Length;
-                                    for (int j = stolb1.Length - 1;  j >= 0; j--)
+                                    for (int j = stolb1.Length - 1; j >= 0; j--)
                                     {
-                                        if (stolb1[j] == "missed" &&  stolb2[j] == "missed")
+                                        if (stolb1[j] == "missed" && stolb2[j] == "missed")
                                         {
                                             cutindex--;
                                         }
+                                        else break;
+                                        
                                     }
                                     string answer = "";
                                     for (int k = 0; k < cutindex - 1; k++)
@@ -150,8 +152,9 @@ namespace EgeClient.Classes
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка: {ex.Message}\n\nСтек вызовов:\n{ex.StackTrace}",
+        "Ошибка",
+        MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

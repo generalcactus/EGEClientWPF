@@ -45,29 +45,56 @@ namespace EgeClient
 
         private void btnFinishExam_Click(object sender, RoutedEventArgs e)
         {
+            //try
+            //{
+            //    if (taskAnswers.ContainsKey(currentTask))
+            //    {
+            //        taskAnswers[currentTask] = txtAnswer.Text;
+            //    }
+            //    else
+            //    {
+            //        taskAnswers.Add(currentTask, txtAnswer.Text);
+            //    }
+            //    var result = MessageBox.Show("Вы уверены, что хотите завершить экзамен?",
+            //                               "Завершение экзамена",
+            //                               MessageBoxButton.YesNo,
+            //                               MessageBoxImage.Question);
+
+            //    if (result == MessageBoxResult.Yes)
+            //    {
+            //        FinishExam();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Ошибка при завершении экзамена: {ex.Message}", "Ошибка");
+            //}
+
+
             try
             {
-                if (taskAnswers.ContainsKey(currentTask))
+                if (timer != null && timer.IsEnabled)
                 {
-                    taskAnswers[currentTask] = txtAnswer.Text;
-                }
-                else
-                {
-                    taskAnswers.Add(currentTask, txtAnswer.Text);
-                }
-                var result = MessageBox.Show("Вы уверены, что хотите завершить экзамен?",
-                                           "Завершение экзамена",
-                                           MessageBoxButton.YesNo,
-                                           MessageBoxImage.Question);
+                    var result = MessageBox.Show("Экзамен будет завершен. Уверены что хотите закончить?",
+                                               "Выход",
+                                               MessageBoxButton.YesNo,
+                                               MessageBoxImage.Warning);
 
-                if (result == MessageBoxResult.Yes)
-                {
-                    FinishExam();
+                    if (result == MessageBoxResult.No)
+                    {
+                        //e.Cancel = true;
+                    }
+                    else
+                    {
+                        FinishExam();
+                        //OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
+                        //timer.Stop();
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при завершении экзамена: {ex.Message}", "Ошибка");
+                Console.WriteLine($"Ошибка при закрытии окна: {ex.Message}");
             }
         }
 

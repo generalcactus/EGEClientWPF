@@ -30,13 +30,13 @@ namespace EgeClient
             { 17, 1 },
             { 18, 1 },
             { 20, 1 },  
-            { 25, 5 },
+            { 25, 10 },
             { 26, 1 },
             { 27, 2}
         };
 
         Variant variant;
-        private readonly int[] tableTaskNumbers = { 17, 18, 19, 20, 25, 26, 27 };
+        private readonly int[] tableTaskNumbers = { 17, 18, 20, 25, 26, 27 };
 
         private DispatcherTimer timer;
         private int timeRemaining = 3 * 60 * 60 + 55 * 60; // 3 часа 55 минут в секундах

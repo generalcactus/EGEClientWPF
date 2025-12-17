@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EgeClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49724a81132d919696fed1d64f5b7773955bedcc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24a6faf32e951c323fd36760335d14520ea4ecac")]
 [assembly: System.Reflection.AssemblyProductAttribute("EgeClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EgeClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

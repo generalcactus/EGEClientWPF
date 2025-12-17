@@ -57,20 +57,24 @@
                 </StackPanel>
 
                 <!-- Navigation Menu -->
+                <!--
                 <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button Content="Главная" Style="{StaticResource MenuButtonStyle}"/>
                     <Button Content="Варианты" Style="{StaticResource MenuButtonStyle}"/>
                     <Button Content="Задания" Style="{StaticResource MenuButtonStyle}"/>
                 </StackPanel>
+                -->
 
                 <!-- User Info -->
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0">
                     <Button x:Name="btnLogin" Content="Войти" Click="btnLogin_Click" 
                             Style="{StaticResource MenuButtonStyle}" Background="#007bff" 
                             Foreground="White" Padding="20,10" Margin="0,0,10,0"/>
+                    <!--
                     <Button x:Name="btnStartExam" Content="Начать экзамен" Click="btnStartExam_Click"
                             Background="#28a745" Foreground="White" Padding="20,10"
                             BorderThickness="0" Cursor="Hand" FontSize="14"/>
+                    -->
                     <Button x:Name="btnExit" Content="Выход" Click="btnExit_Click"
                             Background="#dc3545" Foreground="White" Padding="15,8"
                             BorderThickness="0" Cursor="Hand" Margin="10,0,0,0"/>
@@ -93,8 +97,10 @@
                             <TextBlock Text="Сдача ЕГЭ по информатике" 
                                       FontSize="32" FontWeight="Bold" Foreground="#333"
                                       Margin="0,0,0,10"/>
+                            <!--
                             <TextBlock Text="Тренировочные варианты, разбор заданий и теория для успешной сдачи экзамена" 
                                       FontSize="16" Foreground="#666" Margin="0,0,0,20"/>
+                            -->
                             <Button Content="Начать экзамен" Background="#007bff" 
                                     Foreground="White" Padding="25,15" FontSize="16"
                                     BorderThickness="0" Cursor="Hand" 
@@ -107,6 +113,7 @@
                 <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
                     <!-- Варианты -->
+                    <!--
                     <Border Style="{StaticResource CardStyle}" Width="300" Height="200">
                         <StackPanel>
                             <TextBlock Text="📝" FontSize="40" HorizontalAlignment="Center"/>
@@ -116,8 +123,10 @@
                                       TextWrapping="Wrap" TextAlignment="Center" Foreground="#666"/>
                         </StackPanel>
                     </Border>
+                    -->
 
                     <!-- Задания по темам -->
+                    <!--
                     <Border Style="{StaticResource CardStyle}" Width="300" Height="200">
                         <StackPanel>
                             <TextBlock Text="🔢" FontSize="40" HorizontalAlignment="Center"/>
@@ -127,6 +136,7 @@
                                       TextWrapping="Wrap" TextAlignment="Center" Foreground="#666"/>
                         </StackPanel>
                     </Border>
+                    -->
 
                 </WrapPanel>
             </StackPanel>
