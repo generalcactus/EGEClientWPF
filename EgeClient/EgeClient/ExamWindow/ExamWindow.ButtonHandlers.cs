@@ -117,6 +117,8 @@ namespace EgeClient
                     else
                     {
                         OutputTxtJsonAnswers.SaveAnswersToJson(taskAnswers, variant, testingoption);
+                        FileManager filem = new FileManager();
+                        filem.ClearOptionDirectory(testingoption);
                         //OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
                         timer.Stop();
                     }

@@ -108,5 +108,25 @@ namespace EgeClient.Classes
                 }
             }
         }
+
+        public void ClearOptionDirectory(TestingOption testingOption)
+        {
+            try
+            {
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                string mainFolderPath = System.IO.Path.Combine(basePath, "testfolder");
+
+                if (Directory.Exists(mainFolderPath))
+                {
+                    Directory.Delete(mainFolderPath, true); // true - рекурсивное удаление
+                    Directory.CreateDirectory(mainFolderPath); // Создаем пустую папку
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при очистке директории: {ex.Message}",
+                    "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

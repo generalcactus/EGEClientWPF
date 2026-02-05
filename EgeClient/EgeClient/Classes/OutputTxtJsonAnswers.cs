@@ -87,6 +87,8 @@ namespace EgeClient.Classes
                     else
                     {
                         res.Name = fio;
+                        res.SecondName = "none";
+                        res.MiddleName = "none";
                     }
                     for (int i = 1; i <= variant.Tasks.Count; i++)
                     {

@@ -77,8 +77,8 @@
 
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0 15">
                         <TextBlock Text="Школьник" Margin="0,0,140,0" VerticalAlignment="Center" FontSize="12" FontWeight="SemiBold" 
-                               Foreground="#666"/>
-                        <ToggleButton Width="40" Height="20" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked">
+                               Foreground="#666" Visibility="Hidden"/>
+                        <ToggleButton Width="40" Height="20" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked" Visibility="Hidden">
                             <ToggleButton.Style>
                                 <Style TargetType="{x:Type ToggleButton}">
                                     <Setter Property="Template">
@@ -116,15 +116,15 @@
                             Height="40"/>
 
                     <TextBlock x:Name="GroupName" Text="Группа" FontSize="12" FontWeight="SemiBold" 
-                            Margin="0,0,0,5" Foreground="#666"/>
+                            Margin="0,0,0,5" Foreground="#666" Visibility="Hidden"/>
                     <ComboBox x:Name="txtUserGroup" Style="{StaticResource ChoseGroupStyle}" 
-                            Height="40"/>
+                            Height="40" Visibility="Hidden"/>
 
                     <!-- Password -->
                     <TextBlock x:Name="labelStudCard" Text="Студенческий билет" FontSize="12" FontWeight="SemiBold" 
-                              Margin="0,15,0,5" Foreground="#666"/>
+                              Margin="0,15,0,5" Foreground="#666" Visibility="Hidden"/>
                     <xctk:MaskedTextBox x:Name="txtUserStudCard" Mask="000 00 00" Style="{StaticResource InputStudakStyle}" 
-                            Height="40"/>
+                            Height="40" Visibility="Hidden"/>
 
 
                     <!-- Login Button -->
