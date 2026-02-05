@@ -116,8 +116,8 @@ namespace EgeClient
                     }
                     else
                     {
-                        //OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
-                        OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
+                        OutputTxtJsonAnswers.SaveAnswersToJson(taskAnswers, variant, testingoption);
+                        //OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
                         timer.Stop();
                     }
                 }
@@ -176,7 +176,7 @@ namespace EgeClient
                 }
             }
 
-            
+
 
         }
 

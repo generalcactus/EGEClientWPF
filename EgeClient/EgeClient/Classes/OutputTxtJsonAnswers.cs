@@ -62,6 +62,97 @@ namespace EgeClient.Classes
         }
 
 
+        public static void SaveAnswersToJson(Dictionary<int, string> taskAnswers, Variant variant, TestingOption to)
+        {
+            try
+            {
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "json файлы (*.json)|*.json|Все файлы (*.*)|*.*";
+                saveFileDialog.FileName = $"{variant.Student?.FIO?.Replace("  ", " ").Replace(" ", "_") ?? "Unknown"}_{DateTime.Today.ToString("dd.MM.yyyy")}.json";
+                saveFileDialog.Title = "Сохранить ответы";
+                saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    Result res = new Result();
+                    res.OptionID = to.OptionID;
+                    string fio = variant.Student?.FIO?.Replace("  ", " ");
+                    string[] f_i_o = fio.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                    if (f_i_o.Length == 3)
+                    {
+                        res.Name = f_i_o[1];
+                        res.SecondName = f_i_o[0];
+                        res.MiddleName = f_i_o[2];
+                    }
+                    else
+                    {
+                        res.Name = fio;
+                    }
+                    for (int i = 1; i <= variant.Tasks.Count; i++)
+                    {
+
+                        if (taskAnswers.ContainsKey(i))
+                        {
+
+
+                            if (i == 17 || i == 18 || i == 20 || i == 25 || i == 26 || i == 27)
+                            {
+                                string[] s = taskAnswers[i].Split(';');
+                                string[] stolb1 = s[0].Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                                string[] stolb2 = s[1].Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                                int cutindex = stolb1.Length;
+                                for (int j = stolb1.Length - 1; j >= 0; j--)
+                                {
+                                    if (stolb1[j] == "missed" && stolb2[j] == "missed")
+                                    {
+                                        cutindex--;
+                                    }
+                                    else break;
+
+                                }
+                                string answer = "";
+                                for (int k = 0; k < cutindex - 1; k++)
+                                {
+                                    //answer += $"{stolb1[k]} {stolb2[k]}, ";
+                                    answer += $"{stolb1[k]} {stolb2[k]} ";
+                                }
+                                answer += $"{stolb1[cutindex - 1]} {stolb2[cutindex - 1]}";
+                                //sw.WriteLine($"{i} - {answer}");
+                                Answer ans = new Answer(i.ToString(), answer.Replace("missed", "%noanswer%"));
+                                res.AddAnswer(ans);
+                            }
+                            //else sw.WriteLine($"{i} - {taskAnswers[i]}");
+                            else
+                            {
+                                Answer ans = new Answer(i.ToString(), taskAnswers[i]);
+                                res.AddAnswer(ans);
+                            }
+                            //sw.WriteLine($"{i} - {taskAnswers[i]}");
+                        }
+                        else
+                        {
+                            //sw.WriteLine($"{i} - %noanswer%");
+                            Answer ans = new Answer(i.ToString(), "%noanswer%");
+                            res.AddAnswer(ans);
+                        }
+
+                    }
+                    var options = new JsonSerializerOptions
+                    {
+                        WriteIndented = true
+                    };
+                    string jsonString = JsonSerializer.Serialize(res, options);
+                    File.WriteAllText(saveFileDialog.FileName, jsonString);
+                }
+                Application.Current.MainWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}\n\nСтек вызовов:\n{ex.StackTrace}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
         public static void SaveAnswersToTXT(Dictionary<int, string> taskAnswers, Variant variant)
         {
             try
@@ -81,35 +172,7 @@ namespace EgeClient.Classes
                         {
                             if (taskAnswers.ContainsKey(i))
                             {
-                                //if (i == 17 || i == 18 || i == 20 || i == 25 || i == 26)
-                                //{
-                                //    string[] s = taskAnswers[i].Split(';');
-                                //    string[] stolb1 = s[0].Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                                //    string[] stolb2 = s[1].Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                                //    string answer = "";
-                                //    for (int j = 0; j < stolb1.Length - 1; j++)
-                                //    {
-                                //        answer += $"{stolb1[j]} {stolb2[j]}, ";
-                                //    }
-                                //    answer += $"{stolb1[stolb1.Length - 1]} {stolb2[stolb1.Length - 1]}";
-                                //    for (int k = 0; k < answer.Length; k++)
-                                //    {
-                                //        if (char.IsLetter(answer[k]))
-                                //        {
-                                //            if (k >= 2)
-                                //            {
-                                //                answer = answer.Substring(0, k - 2);
-                                //            }
-                                //            else
-                                //            {
-                                //                answer = "%noanswer%";
-                                //                break;
-                                //            }
-                                //        }
-                                //    }
-                                //    sw.WriteLine($"{i} - {answer}");
-                                //}
-                                //else sw.WriteLine($"{i} - {taskAnswers[i]}");
+
 
                                 if (i == 17 || i == 18 || i == 20 || i == 25 || i == 26 || i == 27)
                                 {
@@ -124,12 +187,13 @@ namespace EgeClient.Classes
                                             cutindex--;
                                         }
                                         else break;
-                                        
+
                                     }
                                     string answer = "";
                                     for (int k = 0; k < cutindex - 1; k++)
                                     {
-                                        answer += $"{stolb1[k]} {stolb2[k]}, ";
+                                        //answer += $"{stolb1[k]} {stolb2[k]}, ";
+                                        answer += $"{stolb1[k]} {stolb2[k]} ";
                                     }
                                     answer += $"{stolb1[cutindex - 1]} {stolb2[cutindex - 1]}";
                                     sw.WriteLine($"{i} - {answer}");

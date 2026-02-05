@@ -23,6 +23,7 @@ namespace EgeClient
         public static Student student;
         //public string ZipFilePath;
         public string VariantFolder;
+        public string JsonFilePath;
         public string ExtractPath = "variant";
         public MainWindow()
         {
@@ -36,8 +37,10 @@ namespace EgeClient
             loginWindow.ShowDialog();
             if (loginWindow.IsDataSaved)
             {
-                student = new Student() { FIO = loginWindow.username,
-                    StudentGroup = (loginWindow.group != ""? loginWindow.group : null),
+                student = new Student()
+                {
+                    FIO = loginWindow.username,
+                    StudentGroup = (loginWindow.group != "" ? loginWindow.group : null),
                     StudentCard = (!loginWindow.student_card.Contains("_") ? loginWindow.student_card : null)
                 };
             }
@@ -54,49 +57,54 @@ namespace EgeClient
                 }
                 else
                 {
-                    /*OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Multiselect = false;
-                    openFileDialog.DefaultExt = ".zip";
-                    if (openFileDialog.ShowDialog() == true)
+
+                    //OpenFolderDialog openFolderDialog = new OpenFolderDialog();
+                    //if(openFolderDialog.ShowDialog() == true)
+                    //{
+                    //    VariantFolder = openFolderDialog.FolderName;
+                    //}
+
+                    OpenFileDialog ofd = new OpenFileDialog();
+                    if (ofd.ShowDialog() == true)
                     {
-                        ZipFilePath = openFileDialog.FileName;
-                    }*/
-                    OpenFolderDialog openFolderDialog = new OpenFolderDialog();
-                    if(openFolderDialog.ShowDialog() == true)
-                    {
-                        VariantFolder = openFolderDialog.FolderName;
+                        JsonFilePath = ofd.FileName;
                     }
+
                 }
-                /*if (ZipFilePath != "" && ZipFilePath != null)
+
+                //if (VariantFolder != "" && VariantFolder != null && System.IO.Path.GetFileNameWithoutExtension(VariantFolder)==student.FIO)
+                //{
+                //    TaskLoader taskLoader = new TaskLoader(VariantFolder);
+                //    variant.Tasks = taskLoader.TaskList;
+                //    variant.Student = student;
+                //    ExamWindow examWindow = new ExamWindow(variant);
+                //    examWindow.Owner = this;
+                //    examWindow.Show();
+                //    this.Hide();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Вы не выбрали папку с вариантом или выбрали не свою");
+                //}
+
+                if (JsonFilePath != "" && JsonFilePath != null)
                 {
-                    if (Directory.Exists(ExtractPath))
-                    {
-                        Directory.Delete(ExtractPath, true);
-                    }
-                    Directory.CreateDirectory(ExtractPath);
-                    ZipFile.ExtractToDirectory(ZipFilePath, ExtractPath);
-                    string jsonFileName = Directory.GetFiles(ExtractPath, "*.json")[0];
-                    string jsonFileText = File.ReadAllText(jsonFileName);
-                    variant = JsonSerializer.Deserialize<Variant>(jsonFileText);
-                    variant.Student = student;
-                    ExamWindow examWindow = new ExamWindow(variant);
-                    examWindow.Owner = this;
-                    examWindow.Show();
-                    this.Hide();
-                }*/
-                if (VariantFolder != "" && VariantFolder != null && System.IO.Path.GetFileNameWithoutExtension(VariantFolder)==student.FIO)
-                {
+                    string jsonString = File.ReadAllText(JsonFilePath);
+                    TestingOption? to = JsonSerializer.Deserialize<TestingOption>(jsonString);
+                    FileManager fm = new FileManager();
+                    VariantFolder = fm.CreateTaskDirectoryStructure(to);
+
                     TaskLoader taskLoader = new TaskLoader(VariantFolder);
                     variant.Tasks = taskLoader.TaskList;
                     variant.Student = student;
-                    ExamWindow examWindow = new ExamWindow(variant);
+                    ExamWindow examWindow = new ExamWindow(variant, to);
                     examWindow.Owner = this;
                     examWindow.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Вы не выбрали папку с вариантом или выбрали не свою");
+                    MessageBox.Show("Вы не выбрали json файл с вариантом");
                 }
             }
             else
@@ -121,5 +129,12 @@ namespace EgeClient
         {
             Application.Current.Shutdown();
         }
+
+
+
+
+
+
+
     }
 }

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Threading;
 using System.IO;
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 namespace EgeClient
 {
     public partial class ExamWindow : Window
@@ -29,13 +29,14 @@ namespace EgeClient
         {
             { 17, 1 },
             { 18, 1 },
-            { 20, 1 },  
+            { 20, 1 },
             { 25, 10 },
             { 26, 1 },
             { 27, 2}
         };
 
         Variant variant;
+        TestingOption testingoption;
         private readonly int[] tableTaskNumbers = { 17, 18, 20, 25, 26, 27 };
 
         private DispatcherTimer timer;
@@ -46,14 +47,16 @@ namespace EgeClient
         private Dictionary<int, string> taskAnswers = new Dictionary<int, string>();
         private TextBox txtAnswers;
 
-        public ExamWindow(Variant var)
+        public ExamWindow(Variant var, TestingOption to)
         {
             variant = var;
+            testingoption = to;
             InitializeComponent();
             InitializeElements();
 
             InitializeTimer();
             UpdateTaskDisplay(1);
+
         }
 
         private void InitializeElements()
@@ -63,7 +66,7 @@ namespace EgeClient
             txtTimer.Text = "03:55:00";
 
         }
-       
+
 
         private void InitializeTimer()
         {
@@ -111,9 +114,12 @@ namespace EgeClient
                 {
                     timer.Stop();
                 }
-                OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
+                //OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
+                OutputTxtJsonAnswers.SaveAnswersToJson(taskAnswers, variant, testingoption);
+
+
                 //OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
-                
+
 
 
                 if (Owner != null)
