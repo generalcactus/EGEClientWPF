@@ -14,6 +14,7 @@ namespace EgeClient.Classes
     public class OutputTxtJsonAnswers
     {
         private static string? _lastFilePath = null;
+        private static bool _directoryselected = false;
 
         public static void SaveAnswersToJsonSimple(Dictionary<int, string> taskAnswers, Variant variant)
         {
@@ -148,6 +149,12 @@ namespace EgeClient.Classes
                     string jsonString = JsonSerializer.Serialize(res, options);
                     File.WriteAllText(saveFileDialog.FileName, jsonString);
                     _lastFilePath = saveFileDialog.FileName;
+                    _directoryselected = true;
+                }
+                if (_directoryselected == false)
+                {
+                    MessageBox.Show($"Вы не выбрали место для сохранения ответов!", "Выберите директорию!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    SaveAnswersToJson(taskAnswers, variant, to);
                 }
                 //Application.Current.MainWindow.Show();
             }

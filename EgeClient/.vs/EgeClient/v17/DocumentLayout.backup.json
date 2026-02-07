@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\classes\\outputtxtjsonanswers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|c:\\-vs-progs-\\new_kege_rep\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|c:\\-vs-progs-\\new_kege_rep\\egeclientwpf\\egeclient\\egeclient\\classes\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\classes\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|c:\\-vs-progs-\\new_kege_rep\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.buttonhandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.buttonhandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|c:\\-vs-progs-\\new_kege_rep\\egeclientwpf\\egeclient\\egeclient\\examwindow\\examwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|solutionrelative:egeclient\\examwindow\\examwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CCECC86-2447-4280-8CE5-9D10FE30B33D}|EgeClient\\EgeClient.csproj|c:\\-vs-progs-\\new_kege_rep\\egeclientwpf\\egeclient\\egeclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,8 +111,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -121,7 +125,7 @@
               "RelativeDocumentMoniker": "EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
               "ToolTip": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
               "RelativeToolTip": "EgeClient\\Classes\\OutputTxtJsonAnswers.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAYwJcAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAYwJwAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T17:14:10.549Z",
               "EditorCaption": ""
@@ -136,8 +140,7 @@
               "RelativeToolTip": "EgeClient\\MainWindow.xaml.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAtwGAAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T06:33:26.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T06:33:26.834Z"
             },
             {
               "$type": "Document",
@@ -170,18 +173,17 @@
               "ToolTip": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.xaml",
               "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-14T16:31:05.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T16:31:05.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ExamWindow.xaml.cs",
               "DocumentMoniker": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.xaml.cs",
               "RelativeDocumentMoniker": "EgeClient\\ExamWindow\\ExamWindow.xaml.cs",
               "ToolTip": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.xaml.cs",
               "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.xaml.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAkwHkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T16:13:13.447Z",
               "EditorCaption": ""
@@ -200,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FileManager.cs",
               "DocumentMoniker": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\FileManager.cs",
               "RelativeDocumentMoniker": "EgeClient\\Classes\\FileManager.cs",
@@ -208,8 +210,7 @@
               "RelativeToolTip": "EgeClient\\Classes\\FileManager.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T10:04:18.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T10:04:18.402Z"
             },
             {
               "$type": "Document",
@@ -221,12 +222,11 @@
               "RelativeToolTip": "EgeClient\\Classes\\FileData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T15:01:48.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T15:01:48.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\Classes\\Result.cs",
               "RelativeDocumentMoniker": "EgeClient\\Classes\\Result.cs",
@@ -234,12 +234,11 @@
               "RelativeToolTip": "EgeClient\\Classes\\Result.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T10:01:45.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T10:01:45.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ExamWindow.ButtonHandlers.cs",
               "DocumentMoniker": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\ExamWindow\\ExamWindow.ButtonHandlers.cs",
               "RelativeDocumentMoniker": "EgeClient\\ExamWindow\\ExamWindow.ButtonHandlers.cs",
@@ -247,8 +246,7 @@
               "RelativeToolTip": "EgeClient\\ExamWindow\\ExamWindow.ButtonHandlers.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAgwHoAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T16:44:24.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T16:44:24.48Z"
             },
             {
               "$type": "Document",
@@ -273,10 +271,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T09:02:28.117Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
