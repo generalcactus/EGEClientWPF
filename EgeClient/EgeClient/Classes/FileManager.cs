@@ -62,8 +62,8 @@ namespace EgeClient.Classes
                     }
                 }
 
-                MessageBox.Show($"Директория успешно создана: {mainFolderPath}", "Успех",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                //MessageBox.Show($"Директория успешно создана: {mainFolderPath}", "Успех",
+                //    MessageBoxButton.OK, MessageBoxImage.Information);
 
                 return mainFolderPath;
             }
