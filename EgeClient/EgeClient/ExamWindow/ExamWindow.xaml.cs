@@ -57,6 +57,8 @@ namespace EgeClient
             InitializeTimer();
             UpdateTaskDisplay(1);
 
+            OutputTxtJsonAnswers.SaveAnswersToJson(taskAnswers, variant, testingoption);
+
         }
 
         private void InitializeElements()
@@ -114,14 +116,14 @@ namespace EgeClient
                 {
                     timer.Stop();
                 }
-                //OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
-                OutputTxtJsonAnswers.SaveAnswersToJson(taskAnswers, variant, testingoption);
+
+                //OutputTxtJsonAnswers.SaveAnswersToJson(taskAnswers, variant, testingoption);
+                Application.Current.MainWindow.Show();
+
                 FileManager filem = new FileManager();
                 filem.ClearOptionDirectory(testingoption);
 
-                //OutputTxtJsonAnswers.SaveAnswersToJsonSimple(taskAnswers, variant);
-
-
+                
 
                 if (Owner != null)
                 {

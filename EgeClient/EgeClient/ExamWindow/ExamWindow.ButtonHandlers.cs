@@ -116,10 +116,12 @@ namespace EgeClient
                     }
                     else
                     {
-                        OutputTxtJsonAnswers.SaveAnswersToJson(taskAnswers, variant, testingoption);
+                        //OutputTxtJsonAnswers.SaveAnswersToJson(taskAnswers, variant, testingoption);
+                        Application.Current.MainWindow.Show();
+
                         FileManager filem = new FileManager();
                         filem.ClearOptionDirectory(testingoption);
-                        //OutputTxtJsonAnswers.SaveAnswersToTXT(taskAnswers, variant);
+                        
                         timer.Stop();
                     }
                 }
@@ -145,6 +147,9 @@ namespace EgeClient
                 {
                     taskAnswers.Add(currentTask, txtAnswer.Text);
                 }
+
+                OutputTxtJsonAnswers.SaveEveryoneAnswerToJson(taskAnswers, variant, testingoption);
+
                 foreach (Button btn in ListOfButtons.Children)
                 {
                     if (btn.Content.ToString() == currentTask.ToString())
@@ -185,6 +190,9 @@ namespace EgeClient
         private void btnSaveTable_Click(object sender, RoutedEventArgs e)
         {
             taskAnswers[currentTask] = SerializeGridAnswers(AnswerTableGrid, tableTaskConfigs[currentTask]);
+
+            OutputTxtJsonAnswers.SaveEveryoneAnswerToJson(taskAnswers, variant, testingoption);
+
             foreach (Button btn in ListOfButtons.Children)
             {
                 if (btn.Content.ToString() == currentTask.ToString())
