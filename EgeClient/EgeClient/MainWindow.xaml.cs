@@ -65,6 +65,7 @@ namespace EgeClient
                     //}
 
                     OpenFileDialog ofd = new OpenFileDialog();
+                    ofd.Title = "Выберите json файл с заданиями";
                     if (ofd.ShowDialog() == true)
                     {
                         JsonFilePath = ofd.FileName;

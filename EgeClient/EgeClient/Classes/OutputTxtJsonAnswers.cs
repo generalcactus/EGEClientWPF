@@ -72,7 +72,7 @@ namespace EgeClient.Classes
                 var saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "json файлы (*.json)|*.json|Все файлы (*.*)|*.*";
                 saveFileDialog.FileName = $"{variant.Student?.FIO?.Replace("  ", " ").Replace(" ", "_") ?? "Unknown"}_{DateTime.Today.ToString("dd.MM.yyyy")}.json";
-                saveFileDialog.Title = "Сохранить ответы";
+                saveFileDialog.Title = "Выберите место, где сохранятся ответы после завершения экзамена";
                 saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 if (saveFileDialog.ShowDialog() == true)

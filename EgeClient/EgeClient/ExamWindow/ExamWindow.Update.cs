@@ -32,17 +32,17 @@ namespace EgeClient
                         DeserializeGridAnswers(AnswerTableGrid, tableTaskConfigs[currentTask], value);
                     }
 
-                    Col0.Width = new GridLength(2, GridUnitType.Star);
+                    Col0.Width = new GridLength(3, GridUnitType.Star);
                     Col1.Width = new GridLength(1, GridUnitType.Star);
 
                     // 2. Скрываем текстовое поле ввода
-                    txtAnswer.Visibility = Visibility.Hidden;
+                    txtAnswer.Visibility = Visibility.Collapsed;
 
                     // 3. Показываем табличное поле ввода
                     TableAnswerPanel.Visibility = Visibility.Visible;
 
-                    labelAnswer.Visibility = Visibility.Hidden;
-                    btnSaveAnswer.Visibility = Visibility.Hidden;
+                    labelAnswer.Visibility = Visibility.Collapsed;
+                    btnSaveAnswer.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
