@@ -16,7 +16,7 @@
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="BorderBrush" Value="#dee2e6"/>
             <Setter Property="Padding" Value="5"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Style.Triggers>
@@ -110,7 +110,7 @@
 
 
                     <!-- Email/Login -->
-                    <TextBlock Text="ФИО" FontSize="12" FontWeight="SemiBold" 
+                    <TextBlock Text="ФИО" FontSize="16" FontWeight="SemiBold" 
                               Margin="0,0,0,5" Foreground="#666"/>
                     <TextBox x:Name="txtUsername" Style="{StaticResource InputFieldStyle}" 
                             Height="40"/>
@@ -128,8 +128,8 @@
 
 
                     <!-- Login Button -->
-                    <Button x:Name="btnLogin" Content="Войти" Style="{StaticResource LoginButtonStyle}" 
-                           Margin="0,20,0,0" Click="btnLogin_Click"/>
+
+                    <Button x:Name="btnLogin" Content="Войти" Style="{StaticResource LoginButtonStyle}" Click="btnLogin_Click" FontSize="16"/>
 
                     <!-- Error Message -->
                     <Border x:Name="errorMessage" Background="#f8d7da" BorderBrush="#f5c6cb" 

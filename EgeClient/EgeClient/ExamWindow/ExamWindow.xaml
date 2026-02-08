@@ -18,6 +18,7 @@
             <Setter Property="BorderBrush" Value="#dee2e6"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="FontSize" Value="16"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#e9ecef"/>
@@ -46,7 +47,7 @@
                     <TextBlock Text="Задания" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
 
                     <!-- Part 1 -->
-                    <TextBlock Text="Часть 1" FontWeight="SemiBold" Margin="0,10,0,5"/>
+                    <TextBlock Text="Часть 1" FontWeight="SemiBold" Margin="0,10,0,5" FontSize="16"/>
                     <WrapPanel x:Name="ListOfButtons">
                         <Button Content="1" Style="{StaticResource TaskButtonStyle}" Click="TaskButton_Click"/>
                         <Button Content="2" Style="{StaticResource TaskButtonStyle}" Click="TaskButton_Click"/>
@@ -81,7 +82,7 @@
                     <Border Background="#f8f9fa" BorderBrush="#dee2e6" BorderThickness="1" 
                             Margin="0,20,0,0" Padding="10" CornerRadius="5">
                         <StackPanel>
-                            <TextBlock Text="Время" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                            <TextBlock Text="Время" FontWeight="SemiBold" Margin="0,0,0,5" FontSize="16"/>
                             <TextBlock x:Name="txtTimer" Text="03:55:42" FontSize="18" FontWeight="Bold" 
                                       Foreground="#dc3545" HorizontalAlignment="Center"/>
 
@@ -96,15 +97,15 @@
 
         <!-- Main Content - Task -->
         <ScrollViewer Grid.Column="1" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto">
-        <StackPanel Grid.Column="1"  Grid.ColumnSpan="2">
-            <StackPanel Margin="30">
-                <!-- Task Header -->
-                <!--<Border Background="White" BorderBrush="#dee2e6" BorderThickness="1" CornerRadius="5" Padding="20">
+            <StackPanel Grid.Column="1"  Grid.ColumnSpan="2">
+                <StackPanel Margin="30">
+                    <!-- Task Header -->
+                    <!--<Border Background="White" BorderBrush="#dee2e6" BorderThickness="1" CornerRadius="5" Padding="20">
                     <StackPanel>
                         <TextBlock x:Name="txtTaskNumber" Text="Задание 1" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
                         <TextBlock x:Name="txtTaskPoints" Text="(1 балл)" Foreground="#666" Margin="0,0,0,20"/>
                         -->
-                <!--<TextBlock x:Name="txtTaskText" TextWrapping="Wrap" FontSize="14" LineHeight="20">
+                    <!--<TextBlock x:Name="txtTaskText" TextWrapping="Wrap" FontSize="14" LineHeight="20">
                             Напишите программу, которая в последовательности натуральных чисел определяет 
                             количество чисел, кратных 4, но не кратных 7. Программа получает на вход 
                             натуральные числа, количество введённых чисел неизвестно, последовательность 
@@ -112,7 +113,7 @@
                             Количество чисел не превышает 1000. Введённые числа не превышают 30 000. 
                             Программа должна вывести одно число: количество чисел, кратных 4, но не кратных 7.
                         </TextBlock>-->
-                <!--
+                    <!--
                         <Image x:Name="TaskImage" Height="400" ></Image>
 
                         <StackPanel Margin="0,20,0,0">
@@ -125,7 +126,7 @@
                 </Border>-->
 
 
-                <!--<Border Background="White" BorderBrush="#dee2e6" BorderThickness="1" CornerRadius="5" Padding="20">
+                    <!--<Border Background="White" BorderBrush="#dee2e6" BorderThickness="1" CornerRadius="5" Padding="20">
                     <StackPanel>
                         <TextBlock x:Name="txtTaskNumber" Text="Задание 1" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
                         <TextBlock x:Name="txtTaskPoints" Text="(1 балл)" Foreground="#666" Margin="0,0,0,20"/>
@@ -205,80 +206,80 @@
 
 
 
-                <Border Background="White" BorderBrush="#dee2e6" BorderThickness="1" CornerRadius="5" Padding="20">
-                    <StackPanel>
-                        <TextBlock x:Name="txtTaskNumber" Text="Задание 1" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                        <TextBlock x:Name="txtTaskPoints" Text="(1 балл)" Foreground="#666" Margin="0,0,0,20"/>
+                    <Border Background="White" BorderBrush="#dee2e6" BorderThickness="1" CornerRadius="5" Padding="20">
+                        <StackPanel>
+                            <TextBlock x:Name="txtTaskNumber" Text="Задание 1" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                            <TextBlock x:Name="txtTaskPoints" Text="(1 балл)" Foreground="#666" Margin="0,0,0,20"/>
 
-                        <Grid x:Name="ContentGrid" Height="Auto">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="149*"/>
-                                <RowDefinition Height="56*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition x:Name="Col0" Width="*"/>
-                                <ColumnDefinition x:Name="Col1" Width="0"/>
-                            </Grid.ColumnDefinitions>
+                            <Grid x:Name="ContentGrid" Height="Auto">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="149*"/>
+                                    <RowDefinition Height="56*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition x:Name="Col0" Width="*"/>
+                                    <ColumnDefinition x:Name="Col1" Width="0"/>
+                                </Grid.ColumnDefinitions>
 
-                            
-                            <StackPanel Grid.Column="0" Grid.RowSpan="2">
-                                <Image x:Name="TaskImage" MaxHeight="700" Stretch="Uniform"  Margin="0,0,0,10" ></Image>
-                            </StackPanel>
 
-                            <StackPanel x:Name="TableAnswerPanel" Grid.Column="1" Visibility="Visible" Grid.RowSpan="2">
-                                <TextBlock Text="Введите или скопируйте свой ответ в поля таблицы" 
-                           HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="SemiBold"/>
-
-                                <Grid x:Name="AnswerTableGrid">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                </Grid>
-
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                                    <Button x:Name="btnClearTable" Content="Очистить" Background="White" 
-                            Foreground="#dc3545" BorderBrush="#dc3545" BorderThickness="1" 
-                            Padding="15,8" Margin="0,0,10,0" Cursor="Hand" Click="btnClearTable_Click"/>
-                                    <Button x:Name="btnSaveTable" Content="Сохранить ответ" Background="#28a745" 
-                            Foreground="White" BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnSaveTable_Click"/>
+                                <StackPanel Grid.Column="0" Grid.RowSpan="2">
+                                    <Image x:Name="TaskImage" MaxHeight="700" Stretch="Uniform"  Margin="0,0,0,10" ></Image>
                                 </StackPanel>
-                            </StackPanel>
-                        </Grid>
 
-                        <StackPanel x:Name="AnswerContainer" Margin="0,20,0,0">
-                            <TextBlock x:Name="labelAnswer" Text="Ответ:" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                            <TextBox x:Name="txtAnswer" Height="60" TextWrapping="Wrap" AcceptsReturn="True"
+                                <StackPanel x:Name="TableAnswerPanel" Grid.Column="1" Visibility="Visible" Grid.RowSpan="2">
+                                    <TextBlock Text="Введите или скопируйте свой ответ в поля таблицы" 
+                           HorizontalAlignment="Center" Margin="0,0,0,10" FontWeight="SemiBold" FontSize="16" TextWrapping="Wrap"/>
+
+                                    <Grid x:Name="AnswerTableGrid">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                    </Grid>
+
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                                        <Button x:Name="btnClearTable" Content="Очистить" Background="White" 
+                            Foreground="#dc3545" BorderBrush="#dc3545" BorderThickness="1" 
+                            Padding="15,8" Margin="0,0,10,0" Cursor="Hand" Click="btnClearTable_Click" FontSize="16"/>
+                                        <Button x:Name="btnSaveTable" Content="Сохранить ответ" Background="#28a745" 
+                            Foreground="White" BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnSaveTable_Click" FontSize="16"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+
+                            <StackPanel x:Name="AnswerContainer" Margin="0,20,0,0">
+                                <TextBlock x:Name="labelAnswer" Text="Ответ:" FontWeight="SemiBold" Margin="0,0,0,5" FontSize="16"/>
+                                <TextBox x:Name="txtAnswer" Height="60" TextWrapping="Wrap" AcceptsReturn="True"
                      VerticalScrollBarVisibility="Auto" BorderBrush="#ced4da" Padding="10"
                      FontFamily="Consolas" FontSize="18" Visibility="Visible" VerticalContentAlignment="Center" />
-                            <Button x:Name="btnSaveAnswer" Content="Сохранить ответ" Background="#28a745" 
-Foreground="White" BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnSaveAnswer_Click"/>
+                                <Button x:Name="btnSaveAnswer" Content="Сохранить ответ" Background="#28a745" 
+Foreground="White" BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnSaveAnswer_Click" FontSize="16"/>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </Border>
+
+
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel x:Name="DownloadLinkContainer" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
                         </StackPanel>
 
-                    </StackPanel>
-                </Border>
-
-
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel x:Name="DownloadLinkContainer" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    </StackPanel>
-
-                    <!-- Navigation -->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                        <Button x:Name="btnPrevious" Content="← Предыдущее" Background="White" BorderBrush="#dee2e6" 
-                            BorderThickness="1" Padding="15,8" Margin="0,0,10,0" Cursor="Hand" Click="btnPrevious_Click"/>
-                        <Button x:Name="btnNext" Content="Следующее →" Background="#007bff" Foreground="White" 
-                            BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnNext_Click"/>
-                    </StackPanel>
-                </Grid>
+                        <!-- Navigation -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                            <Button x:Name="btnPrevious" Content="← Предыдущее" Background="White" BorderBrush="#dee2e6" 
+                            BorderThickness="1" Padding="15,8" Margin="0,0,10,0" Cursor="Hand" Click="btnPrevious_Click" FontSize="16"/>
+                            <Button x:Name="btnNext" Content="Следующее →" Background="#007bff" Foreground="White" 
+                            BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnNext_Click" FontSize="16"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
         </ScrollViewer>
 
         <!-- Right Sidebar - Additional Info -->

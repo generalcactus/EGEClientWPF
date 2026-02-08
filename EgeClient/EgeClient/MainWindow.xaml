@@ -14,7 +14,7 @@
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Foreground" Value="#333"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="Padding" Value="15,10"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Style.Triggers>
@@ -78,7 +78,7 @@
                     -->
                     <Button x:Name="btnExit" Content="Выход" Click="btnExit_Click"
                             Background="#dc3545" Foreground="White" Padding="15,8"
-                            BorderThickness="0" Cursor="Hand" Margin="10,0,0,0"/>
+                            BorderThickness="0" Cursor="Hand" Margin="10,0,0,0" FontSize="16"/>
                 </StackPanel>
             </Grid>
         </Border>
@@ -145,8 +145,8 @@
 
         <!-- Footer -->
         <Border Grid.Row="2" Background="#343a40" Padding="20">
-            <TextBlock Text="© 2025 ЕГЭ по информатике. Платформа для сдачи экзамена." 
-                      Foreground="White" HorizontalAlignment="Center"/>
+            <TextBlock Text="© 2026 ЕГЭ по информатике. Платформа для сдачи экзамена." 
+                      Foreground="White" HorizontalAlignment="Center" FontSize="16"/>
         </Border>
     </Grid>
 </Window>
