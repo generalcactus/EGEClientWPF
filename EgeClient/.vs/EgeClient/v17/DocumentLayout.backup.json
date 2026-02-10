@@ -115,8 +115,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 7,
@@ -199,8 +203,7 @@
               "RelativeToolTip": "EgeClient\\LoginWindow.xaml.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAIwBwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T12:08:39.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T12:08:39.71Z"
             },
             {
               "$type": "Document",
@@ -223,8 +226,7 @@
               "ToolTip": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\MainWindow.xaml",
               "RelativeToolTip": "EgeClient\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-21T06:33:19.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T06:33:19.942Z"
             },
             {
               "$type": "Document",
@@ -247,8 +249,7 @@
               "ToolTip": "C:\\-VS-PROGS-\\New_KEGE_rep\\EGEClientWPF\\EgeClient\\EgeClient\\LoginWindow.xaml",
               "RelativeToolTip": "EgeClient\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-28T09:02:16.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T09:02:16.047Z"
             },
             {
               "$type": "Document",
@@ -261,10 +262,6 @@
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwB8AAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-08T15:48:08.513Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",

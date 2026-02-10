@@ -249,12 +249,12 @@
                             </Grid>
 
                             <StackPanel x:Name="AnswerContainer" Margin="0,20,0,0">
-                                <TextBlock x:Name="labelAnswer" Text="Ответ:" FontWeight="SemiBold" Margin="0,0,0,5" FontSize="16"/>
+                                <TextBlock x:Name="labelAnswer" Text="Ответ:" FontWeight="SemiBold" Margin="0,0,0,5" FontSize="16" HorizontalAlignment="Right" MinWidth="500"/>
                                 <TextBox x:Name="txtAnswer" Height="60" TextWrapping="Wrap" AcceptsReturn="True"
-                     VerticalScrollBarVisibility="Auto" BorderBrush="#ced4da" Padding="10"
+                     VerticalScrollBarVisibility="Auto" BorderBrush="#ced4da" Padding="10" HorizontalAlignment="Right" MinWidth="500"
                      FontFamily="Consolas" FontSize="18" Visibility="Visible" VerticalContentAlignment="Center" />
                                 <Button x:Name="btnSaveAnswer" Content="Сохранить ответ" Background="#28a745" 
-Foreground="White" BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnSaveAnswer_Click" FontSize="16"/>
+Foreground="White" BorderThickness="0" Padding="15,8" Cursor="Hand" Click="btnSaveAnswer_Click" FontSize="16" HorizontalAlignment="Right" MinWidth="500"/>
                             </StackPanel>
 
                         </StackPanel>
