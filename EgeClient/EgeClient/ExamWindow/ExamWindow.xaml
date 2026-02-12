@@ -47,7 +47,7 @@
                     <TextBlock Text="Задания" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
 
                     <!-- Part 1 -->
-                    <TextBlock Text="Часть 1" FontWeight="SemiBold" Margin="0,10,0,5" FontSize="16"/>
+                    <TextBlock Text="Часть 1" FontWeight="SemiBold" Margin="0,10,0,5" FontSize="16" Visibility="Collapsed"/>
                     <WrapPanel x:Name="ListOfButtons">
                         <Button Content="1" Style="{StaticResource TaskButtonStyle}" Click="TaskButton_Click"/>
                         <Button Content="2" Style="{StaticResource TaskButtonStyle}" Click="TaskButton_Click"/>
